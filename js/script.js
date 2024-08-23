@@ -76,3 +76,112 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Add this to your existing GSAP animations
+gsap.utils.toArray(".services .animate-fade-up").forEach((element) => {
+  gsap.from(element, {
+    y: 50,
+    opacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: element,
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none reverse",
+    },
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filterValue = button.getAttribute("data-filter");
+
+      // Update active button
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Filter items
+      portfolioItems.forEach((item) => {
+        if (filterValue === "all" || item.classList.contains(filterValue)) {
+          item.style.display = "block";
+          // Add fade-in animation
+          gsap.fromTo(
+            item,
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+          );
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+
+  // Initial animation for portfolio items
+  document.querySelectorAll(".portfolio-item").forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      gsap.to(item.querySelector(".portfolio-overlay"), {
+        opacity: 1,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+      gsap.from(
+        item.querySelectorAll(".portfolio-overlay h3, .portfolio-overlay p"),
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power2.out",
+        }
+      );
+    });
+
+    item.addEventListener("mouseleave", () => {
+      gsap.to(item.querySelector(".portfolio-overlay"), {
+        opacity: 0,
+        duration: 0.3,
+        ease: "power2.in",
+      });
+    });
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".contact-text", {
+    x: -100,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".contact-us",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  gsap.from(".contact-image", {
+    x: 100,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".contact-us",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  // Button hover animation
+  const btn = document.querySelector(".custom-btn");
+  btn.addEventListener("mouseenter", () => {
+    gsap.to(btn, { scale: 1.05, duration: 0.3 });
+  });
+  btn.addEventListener("mouseleave", () => {
+    gsap.to(btn, { scale: 1, duration: 0.3 });
+  });
+});
