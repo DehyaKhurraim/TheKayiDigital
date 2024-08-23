@@ -1,0 +1,31 @@
+/* Color Variables */
+:root {
+    --lavender-web: #ccd0e7ff;
+    --slate-blue: #7c57e0ff;
+    --eerie-black: #1f1e1eff;
+    --royal-blue-traditional: #21276eff;
+    --steel-pink: #bf49dfff;
+
+    /* Typography */
+    --font-h1: 'Poppins Bold', sans-serif;
+    --font-h2: 'Poppins Medium', sans-serif;
+    --font-h3: 'Poppins Regular', sans-serif;
+    --font-text: 'Poppins Light', sans-serif;
+}
+
+/* Spacing */
+:root {
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+}
+
+/* Border Radius */
+:root {
+    --border-radius: 8px;
+}
+
+/* Shadows */
+:root {
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
