@@ -273,3 +273,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Change testimonial every 5 seconds
   setInterval(showNextTestimonial, 5000);
 });
+

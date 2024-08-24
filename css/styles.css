@@ -22,6 +22,7 @@
   --eerie-black: #1f1e1eff;
   --royal-blue-traditional: #21276eff;
   --steel-pink: #bf49dfff;
+  --dream: rgb(215, 164, 230);
 
   --line-color: #6200f3;
   /* Color for the underline */
@@ -540,6 +541,8 @@ header {
 }
 
 .service-icon {
+  font-size: 3.5rem;
+  color: var(--dream);
   margin-bottom: 20px;
 }
 
