@@ -11,6 +11,246 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Portfolio Page Styles */
+
+        .portfolio-grid {
+            background-color: var(--lavender-web);
+            padding: 80px 0;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background-color: transparent;
+            border: 2px solid var(--slate-blue);
+            color: var(--slate-blue);
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--slate-blue);
+            color: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-item:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-overlay h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-overlay p {
+            color: var(--lavender-web);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Case Studies Styles */
+        .case-studies {
+            background-color: var(--eerie-black);
+            padding: 80px 0;
+            color: white;
+        }
+
+        .case-study-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .case-study-item {
+            position: relative;
+            flex-basis: calc(50% - 20px);
+            margin-bottom: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .case-study-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            background-color: var(--dream);
+        }
+
+        .case-study-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .case-study-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .case-study-content {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .case-study-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--lavender-web);
+        }
+
+        .case-study-content p {
+            margin-bottom: 20px;
+            color: var(--light-gray);
+        }
+
+        .case-study-content:hover h3 {
+            color: var(--eerie-black);
+        }
+
+        .case-study-content:hover p {
+            color: var(--eerie-black);
+        }
+
+        .case-study-content a.btn-primary {
+            background-color: var(--slate-blue);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .case-study-content:hover a.btn-primary {
+            background-color: var(--royal-blue-traditional);
+        }
+
+        .case-study-content a.btn-primary:hover {
+            background-color: var(--dark-blue);
+        }
+
+
+        /* Testimonials Styles */
+
+        .testimonial-content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-content blockquote {
+            font-style: italic;
+            color: var(--royal-blue-traditional);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .testimonial-content p {
+            color: var(--eerie-black);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .testimonial-author img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .testimonial-author h4 {
+            color: var(--royal-blue-traditional);
+            margin-bottom: 5px;
+        }
+
+        .cta-box {
+            background-color: var(--royal-blue-traditional);
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .cta-box h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-box .custom-btn {
+            background-color: white;
+            color: var(--royal-blue-traditional);
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .cta-box .custom-btn:hover {
+            background-color: var(--slate-blue);
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -72,6 +312,151 @@
             </div>
         </section>
 
+        <section class="portfolio-grid">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+
+                <!-- Filter Options -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="marketing">Marketing</button>
+                    <button class="filter-btn" data-filter="optimization">Optimization</button>
+                    <button class="filter-btn" data-filter="software">Software Solutions</button>
+                    <button class="filter-btn" data-filter="outsourcing">Outsourcing</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="project-grid">
+                    <!-- Project Item 1 -->
+                    <div class="project-item marketing">
+                        <img src="../images/customerLogo1.jpg" alt="Project 1">
+                        <div class="project-overlay">
+                            <h3>Digital Marketing Campaign</h3>
+                            <p>Boosted online presence for a tech startup</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 2 -->
+                    <div class="project-item optimization">
+                        <img src="../images/team.jpg" alt="Project 2">
+                        <div class="project-overlay">
+                            <h3>E-commerce Optimization</h3>
+                            <p>Increased conversion rates by 40%</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 3 -->
+                    <div class="project-item software">
+                        <img src="../images/joe-done.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <h3>Custom CRM Solution</h3>
+                            <p>Streamlined operations for a finance firm</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 1 -->
+                    <div class="project-item marketing">
+                        <img src="../images/Image4.jpg" alt="Project 1">
+                        <div class="project-overlay">
+                            <h3>Digital Marketing Campaign</h3>
+                            <p>Boosted online presence for a tech startup</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 2 -->
+                    <div class="project-item optimization">
+                        <img src="../images/hero.jpg" alt="Project 2">
+                        <div class="project-overlay">
+                            <h3>E-commerce Optimization</h3>
+                            <p>Increased conversion rates by 40%</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 3 -->
+                    <div class="project-item software">
+                        <img src="../images/customerLogo2.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <h3>Custom CRM Solution</h3>
+                            <p>Streamlined operations for a finance firm</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 1 -->
+                    <div class="project-item marketing">
+                        <img src="../images/Image7.jpg" alt="Project 1">
+                        <div class="project-overlay">
+                            <h3>Digital Marketing Campaign</h3>
+                            <p>Boosted online presence for a tech startup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section class="case-studies">
+            <div class="container">
+                <h2 class="section-title" style="color: var(--lavender-web);">Case Studies</h2>
+                <div class="case-study-list">
+                    <!-- Case Study 1 -->
+                    <div class="case-study-item">
+                        <img src="../images/customerLogo1.jpg" alt="Case Study 1">
+                        <div class="case-study-content">
+                            <h3>Revolutionizing Online Retail</h3>
+                            <p>How we helped an e-commerce giant increase sales by 200%</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="case-study-item">
+                        <img src="../images/customerLogo2.jpg" alt="Case Study 2">
+                        <div class="case-study-content">
+                            <h3>B2B Lead Generation Success</h3>
+                            <p>Generating quality leads for a SaaS company</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="testimonial">
+            <div class="container">
+                <h2 class="section-title">Our Customers</h2>
+                <p class="subtitle">Hear what our clients have to say about our services</p>
+
+                <div class="customer-logos">
+                    <img src="../images/customerLogo1.jpg" alt="Customer Logo 1">
+                    <img src="../images/customerLogo2.jpg" alt="Customer Logo 2">
+                    <img src="../images/customerLogo1.jpg" alt="Customer Logo 3">
+                    <img src="../images/customerLogo2.jpg" alt="Customer Logo 4">
+                </div>
+
+                <div class="testimonial-content">
+                    <blockquote>"Amazing Designs and Quality Work!"</blockquote>
+                    <p>Our experience with Marketing Agency has been exceptional. Their innovative strategies and
+                        creative
+                        designs have significantly boosted our online presence and customer engagement.</p>
+                    <div class="testimonial-author">
+                        <img src="../images/joe-done.jpg" alt="John Doe">
+                        <div>
+                            <h4>John Doe</h4>
+                            <p>CEO, ACME Inc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <h3>Would you like to start a project with us?</h3>
+                    <p>Etiam erat lectus, finibus eget commodo quis, tincidunt eget leo. Nullam quis vulputate orci, ac
+                        accumsan
+                        quam. Morbi fringilla congue libero.</p>
+                    <a href="contactus.html" class="btn btn-primary custom-btn">ContactUs</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">

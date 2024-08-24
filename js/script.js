@@ -274,3 +274,87 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(showNextTestimonial, 5000);
 });
 
+// About Us page animations
+gsap.utils.toArray(".animate-fade-up").forEach((element) => {
+  gsap.from(element, {
+    y: 50,
+    opacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: element,
+      start: "top 80%",
+    },
+  });
+});
+
+gsap.from(".animate-fade-right", {
+  x: -100,
+  opacity: 1,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".animate-fade-right",
+    start: "top 80%",
+  },
+});
+
+gsap.from(".animate-fade-left", {
+  x: 100,
+  opacity: 1,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".animate-fade-left",
+    start: "top 80%",
+  },
+});
+
+gsap.utils.toArray(".value-card").forEach((card, index) => {
+  gsap.from(card, {
+    y: 50,
+    opacity: 1,
+    duration: 0.8,
+    delay: index * 0.2,
+    scrollTrigger: {
+      trigger: card,
+      start: "top 80%",
+    },
+  });
+});
+
+gsap.utils.toArray(".process-step").forEach((step, index) => {
+  gsap.from(step, {
+    x: -50,
+    opacity: 1,
+    duration: 0.8,
+    delay: index * 0.2,
+    scrollTrigger: {
+      trigger: step,
+      start: "top 80%",
+    },
+  });
+});
+
+// Add this to your existing script.js file
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectItems = document.querySelectorAll(".project-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filterValue = button.getAttribute("data-filter");
+
+      // Update active button
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Filter projects
+      projectItems.forEach((item) => {
+        if (filterValue === "all" || item.classList.contains(filterValue)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+});
