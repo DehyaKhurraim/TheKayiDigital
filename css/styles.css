@@ -172,9 +172,6 @@ header {
   transition: all .50s ease;
 }
 
-.mainn a:hover {
-  color: #bf49dfff;
-}
 
 #menu-icon {
   font-size: 35px;
@@ -502,7 +499,7 @@ header {
 }
 
 .services .subtitle {
-  color: var(--steel-pink);
+  color: rgb(215, 164, 230);
 }
 
 .service-item {
@@ -747,7 +744,7 @@ header {
 }
 
 .contact-text {
-  background-color: var(--steel-pink);
+  background-color: rgb(215, 164, 230);
   color: white;
   padding: 40px;
   border-radius: 10px 0 0 10px;
@@ -780,7 +777,7 @@ header {
 
 .custom-btn {
   background-color: white;
-  color: var(--steel-pink);
+  color: rgb(215, 164, 230);
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
@@ -803,6 +800,104 @@ header {
     border-radius: 10px;
     margin-bottom: 20px;
   }
+}
+
+/* Testimonial Section */
+.testimonial {
+  background-color: var(--lavender-web);
+  padding: 80px 0;
+}
+
+.customer-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.customer-logos img {
+  max-width: 100px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.customer-logos img:hover {
+  filter: grayscale(0%);
+}
+
+.testimonial-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-content blockquote {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--slate-blue);
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.testimonial-author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.testimonial-author h4 {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: var(--eerie-black);
+  color: var(--lavender-web);
+  padding: 80px 0;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.reason {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.reason:hover {
+  transform: translateY(-10px);
+}
+
+.reason i {
+  font-size: 3rem;
+  color: rgb(215, 164, 230);
+  margin-bottom: 15px;
+}
+
+.reason h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.reason p {
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 /*Footer*/

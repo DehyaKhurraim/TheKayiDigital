@@ -184,4 +184,92 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.addEventListener("mouseleave", () => {
     gsap.to(btn, { scale: 1, duration: 0.3 });
   });
+  // Existing GSAP setup
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Function to handle animations
+  function animateElements() {
+    gsap.utils.toArray(".animate-fade-up").forEach((element) => {
+      gsap.from(element, {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+
+    gsap.utils.toArray(".animate-fade-in").forEach((element) => {
+      gsap.from(element, {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+
+    gsap.utils.toArray(".animate-slide-up").forEach((element) => {
+      gsap.from(element, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+
+    gsap.utils.toArray(".animate-zoom-in").forEach((element) => {
+      gsap.from(element, {
+        scale: 0.5,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+  }
+
+  // Call the animation function when the DOM is loaded
+  document.addEventListener("DOMContentLoaded", animateElements);
+
+  // Testimonial Slider (if you have multiple testimonials)
+  const testimonials = document.querySelectorAll(".testimonial-content");
+  let currentTestimonial = 0;
+
+  function showNextTestimonial() {
+    gsap.to(testimonials[currentTestimonial], {
+      opacity: 0,
+      y: -50,
+      duration: 0.5,
+      onComplete: () => {
+        testimonials[currentTestimonial].style.display = "none";
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        testimonials[currentTestimonial].style.display = "block";
+        gsap.fromTo(
+          testimonials[currentTestimonial],
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.5 }
+        );
+      },
+    });
+  }
+
+  // Change testimonial every 5 seconds
+  setInterval(showNextTestimonial, 5000);
 });
