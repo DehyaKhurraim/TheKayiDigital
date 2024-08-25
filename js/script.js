@@ -358,3 +358,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// GSAP Animation Code
+gsap.registerPlugin(ScrollTrigger);
+
+// Fade Up Animation
+gsap.utils.toArray(".animate-fade-up").forEach((element) => {
+  gsap.to(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: "top bottom",
+      end: "top 80%",
+      scrub: true,
+    },
+    opacity: 1,
+    y: 0,
+    duration: 1,
+  });
+});
+
+// Fade Right Animation
+gsap.utils.toArray(".animate-fade-right").forEach((element) => {
+  gsap.to(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: "top bottom",
+      end: "top 80%",
+      scrub: true,
+    },
+    opacity: 1,
+    x: 0,
+    duration: 1,
+  });
+});
+
+// Fade Left Animation
+gsap.utils.toArray(".animate-fade-left").forEach((element) => {
+  gsap.to(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: "top bottom",
+      end: "top 80%",
+      scrub: true,
+    },
+    opacity: 1,
+    x: 0,
+    duration: 1,
+  });
+});

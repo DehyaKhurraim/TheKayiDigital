@@ -11,6 +11,102 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Contact Info */
+        .contact-info {
+            padding: 80px 0;
+        }
+
+        .contact-card {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--eerie-black);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .contact-card:hover {
+            background-color: var(--dream);
+            color: var(--eerie-black);
+        }
+
+        .contact-card i {
+            font-size: 32px;
+            color: var(--lavender-web);
+            margin-bottom: 10px;
+        }
+
+        .contact-card:hover i {
+            color: var(--eerie-black);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            padding: 60px 0;
+            background-color: var(--lavender-web);
+        }
+
+        .contact-form form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid var(--platinum);
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: var(--lavender-web);
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .classic-btn {
+            background-color: var(--slate-blue);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .classic-btn:hover {
+            background-color: var(--eerie-black);
+        }
+
+        /* Map Container */
+        .map-container {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .contact-details h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-details p {
+            margin-bottom: 10px;
+        }
+
+        .toll-free h3 {
+            margin-bottom: 10px;
+        }
+
+        .toll-free p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,20 +154,104 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero" style="background-image: url('../images/Image7.jpg');">
+    <main
+        style="background-image: url('../images/Image1.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <section class="hero">
             <div class="container" style="margin-top: 10%;">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h1 class="hero-title">ContactUs</h1>
-                        <p class="hero-subtitle">Innovative solutions for your business growth</p>
-                        <a href="portfolio.html" class="btn btn-primary custom-btn">Getting Started</a>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6 text-center">
+                        <h1 class="hero-title">Get in Touch with Us</h1>
+                        <p class="hero-subtitle">We're here to answer any questions you have and help you get started.
+                            Let's connect and discuss
+                            how we can support your business goals.</p>
+                        <a href="#contact-form" class="btn btn-primary custom-btn">Contact Us Today</a>
+
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="contact-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 animate-fade-up">
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Visit Us</h3>
+                            <p>123/B, Route 66, Downtown,<br>Washington, DC 20004, US</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-fade-up">
+                        <div class="contact-card">
+                            <i class="fas fa-phone-alt"></i>
+                            <h3>Call Us</h3>
+                            <p>+001 987-654-3210<br>1-800-1234-567</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-fade-up">
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email Us</h3>
+                            <p>info@example.com<br>support@example.com</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <section class="contact-form" id="#contact-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 animate-fade-right">
+                        <h2>Request Free Consultation</h2>
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                            <!-- Your Web3Forms Access Key -->
+                            <input type="hidden" name="access_key" value="6cc9188e-bef4-445f-86a0-70d82026849c">
+
+                            <!-- Form Fields -->
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your name*" required
+                                    pattern="[A-Za-z]+" title="Please enter only alphabetic characters">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your email*" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your message*" required></textarea>
+                            </div>
+
+                            <!-- Honeypot Field for Spam Protection (optional) -->
+                            <input type="text" name="honeypot" style="display:none">
+
+                            <!-- Submission button -->
+                            <button type="submit" class="btn btn-primary classic-btn">SUBMIT</button>
+
+                            <!-- Success/Error Messages -->
+                            <p id="result-message" style="display: none;"></p>
+                        </form>
+                    </div>
+                    <div class="col-md-6 animate-fade-left">
+                        <h2>Get In Touch</h2>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.1501561303617!2d-77.03871668464454!3d38.89767627956992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x715969d86d0b76bf!2sThe%20White%20House!5e0!3m2!1sen!2sus!4v1629308474468!5m2!1sen!2sus"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Reach Us</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> 123/B, Route 66, Downtown, Washington, DC 20004, US
+                            </p>
+                            <p><i class="fas fa-envelope"></i> info@example.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +001 987-654-3210</p>
+                            <p><i class="fas fa-fax"></i> +001 987-654-3210</p>
+                        </div>
+                        <div class="toll-free">
+                            <h3>Call us Toll Free</h3>
+                            <p class="phone-number">1-800-1234-567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -136,6 +316,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="../js/script.js"></script>
+    <script>
+        const form = document.getElementById('contactForm');
+        const resultMessage = document.getElementById('result-message');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    resultMessage.style.display = 'block';
+                    resultMessage.textContent = 'Thank you! Your message has been sent.';
+                    resultMessage.style.color = 'green';
+                    form.reset(); // Clear the form after successful submission
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                resultMessage.style.display = 'block';
+                resultMessage.textContent = 'Oops! Something went wrong. Please try again.';
+                resultMessage.style.color = 'red';
+            }
+        });
+    </script>
+
 </body>
 
 </html>
