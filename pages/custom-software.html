@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Software Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #1f1e1e, #21276e);
+            /* Gradient from eerie-black to royal-blue-traditional */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background:
+                radial-gradient(circle, rgba(215, 164, 230, 0.1) 10%, transparent 10%),
+                radial-gradient(circle, rgba(215, 164, 230, 0.1) 10%, transparent 10%);
+            background-position: 0 0, 50px 50px;
+            background-size: 100px 100px;
+            animation: backgroundAnimation 20s linear infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            color: #ccd0e7;
+            /* lavender-web */
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: rgb(215, 164, 230);
+            /* dream */
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #ccd0e7;
+            /* lavender-web */
+        }
+
+        .hero .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: rgb(215, 164, 230);
+            /* dream */
+            color: #1f1e1e;
+            /* eerie-black */
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #ccd0e7;
+            /* lavender-web */
+            color: #1f1e1e;
+            /* eerie-black */
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(215, 164, 230, 0.3);
+        }
+
+        .service-details {
+            padding: 80px 0;
+            background-color: var(--lavender-web);
+        }
+
+        .service-details h2 {
+            color: var(--slate-blue);
+            margin-bottom: 20px;
+        }
+
+        .service-details ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .service-details ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-details ul li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--slate-blue);
+        }
+
+        .cta-box {
+            background-color: var(--royal-blue-traditional);
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .cta-box h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-box .custom-btn {
+            background-color: white;
+            color: var(--royal-blue-traditional);
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .cta-box .custom-btn:hover {
+            background-color: var(--slate-blue);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg" style="width: 100%;">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <!-- <img src="#" alt="" width="40" class="d-inline-block align-text-top"> -->
+                    <span style="color: rgb(215, 164, 230);">Marketing Agency.</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    style="background-color: rgb(215, 164, 230); right: 0;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="services.html"
+                                style="color: rgb(215, 164, 230);">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">AboutUs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">ContactUs</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex ms-3">
+                        <a href="https://www.instagram.com/" class="btn btn-link" style="color: rgb(215, 164, 230);"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/" class="btn btn-link" style="color: rgb(215, 164, 230);"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://www.behance.com/" class="btn btn-link" style="color: rgb(215, 164, 230);"><i
+                                class="bi bi-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="animate-fade-up">Custom Software Development</h1>
+                <p class="subtitle animate-fade-up">Tailor-made software solutions to fit your business needs</p>
+                <a href="#service-details" class="cta-button animate-fade-up">Get Started</a>
+            </div>
+        </section>
+        <section class="service-details" id="service-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 animate-fade-right">
+                        <h2>Customized Software for Your Business</h2>
+                        <p>Our custom software development services help you build powerful, scalable solutions that are
+                            tailored to meet the unique needs of your business. We handle everything from design to
+                            deployment.</p>
+                        <ul>
+                            <li>Custom Web Applications</li>
+                            <li>Mobile App Development</li>
+                            <li>Cloud Solutions</li>
+                            <li>Enterprise Software</li>
+                            <li>API Development</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 animate-fade-left">
+                        <img src="../images/customerLogo2.jpg" alt="Custom Software Development" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="testimonial">
+            <div class="container">
+                <div class="cta-box">
+                    <h3>Looking for a custom software solution?</h3>
+                    <p>Our team can create a tailored solution that meets all your specific needs and business goals.
+                    </p>
+                    <a href="contactus.html" class="btn btn-primary custom-btn">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="footer-logo">
+                        <!-- <img src="../images/logo.png" alt="Digital Agency Logo"> -->
+                        <span>DIGITAL<br>AGENCY</span>
+                    </a>
+                    <p class="footer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Business</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Faq's</a></li>
+                        <li><a href="#">Customers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Get In Touch</h3>
+                    <p>Rt. 66, Downtown, Washington, DC</p>
+                    <p>info@example.com</p>
+                    <p>1-800-1234-567</p>
+                    <p>+001-987-654-3210</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Digital Agency | Powered by Digital Agency</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <!-- Include GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
