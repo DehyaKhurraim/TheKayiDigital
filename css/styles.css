@@ -23,6 +23,9 @@
   --royal-blue-traditional: #21276eff;
   --steel-pink: #bf49dfff;
   --dream: rgb(215, 164, 230);
+    --logo-pink: #cf21c3;
+      --logo-pink-light: #e154d7;
+      --logo-pink-dark: #a11a9b;
 
   --line-color: #6200f3;
   /* Color for the underline */
@@ -113,7 +116,7 @@ header {
 }
 
 .navbar-nav a:hover {
-  color: var(--lavender-web);
+  color: var(--logo-pink-light);
 }
 
 .navbar-nav a.active {
@@ -140,7 +143,7 @@ header {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--line-color);
+  background-color: var(--logo-pink-dark);
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform var(--transition-time) ease;
@@ -157,7 +160,7 @@ header {
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--lavender-web);
+  color: var(--logo-pink-light);
 }
 
 .mainn {
@@ -232,7 +235,7 @@ header {
 }
 
 #box1 {
-  background-color: rgb(215, 164, 230);
+  background-color: var(--dream);
 }
 
 #box1 p,
@@ -242,12 +245,12 @@ header {
 }
 
 #box1 .box-icon {
-  color: var(--royal-blue-traditional);
+  color: var(--steel-pink);
 }
 
 .box:hover {
   transform: translateY(-10px);
-  background-color: rgb(230, 179, 240);
+  background-color: var(--dream);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
@@ -258,7 +261,7 @@ header {
 }
 
 .box:hover .box-icon {
-  color: var(--royal-blue-traditional);
+  color: var(--steel-pink); 
 }
 
 .box-icon {
@@ -307,7 +310,7 @@ header {
   background-color: transparent;
   /* Using theme color */
   color: #fff;
-  border: 2px solid var(--steel-pink);
+  border: 2px solid var(--logo-pink);
   border-radius: var(--border-radius);
   /* Consistent border-radius */
   transition: all 0.3s ease;
@@ -319,11 +322,10 @@ header {
 
 /* Hover Effects */
 .custom-btn:hover {
-  background-color: #fff;
-  color: var(--steel-pink);
-  border-color: var(--steel-pink);
+  background-color: var(--logo-pink);
+  color: #fff;
+  border-color: var(--logo-pink);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  /* Increase shadow on hover */
 }
 
 /* Animated Background on Hover */
@@ -360,26 +362,6 @@ header {
   padding: 80px 0;
   background-color: var(--lavender-web);
   color: var(--eerie-black);
-}
-
-.section-title {
-  font-family: var(--font-h1);
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 0;
-  color: var(--slate-blue);
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInDown 0.8s ease forwards;
-}
-
-.subtitle {
-  font-family: var(--font-text);
-  font-size: 1rem;
-  color: var(--royal-blue-traditional);
-  margin-bottom: 40px;
-  opacity: 0;
-  animation: fadeIn 0.8s ease 0.4s forwards;
 }
 
 .team-image {
@@ -448,7 +430,7 @@ header {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: var(--royal-blue-traditional);
+  color: var(--logo-pink-dark);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease forwards;
@@ -462,6 +444,26 @@ header {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease forwards;
+}
+
+.section-title {
+  font-family: var(--font-h1);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: var(--logo-pink);
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.subtitle {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  color: var(--logo-pink);
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.4s forwards;
 }
 
 .col-md-4:nth-child(1) h2,
@@ -511,19 +513,21 @@ header {
 .services {
   padding: 80px 0;
     background-color: var(--eerie-black);
-    color: var(--lavender-web);
+    color: var(--logo-pink-light);
 }
 
 .services .section-title {
-  color: var(--lavender-web);
+  color: var(--logo-pink);
 }
 
 .services .subtitle {
-  color: rgb(215, 164, 230);
+  color: white;
 }
 
 .service-item {
-  background: linear-gradient(145deg, #12132b, #1a1b3a);
+  background: linear-gradient(145deg,
+        var(--dream),
+        var(--logo-pink-dark));
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   padding: 40px;
@@ -537,7 +541,9 @@ header {
 }
 
 .service-item:hover {
-  background: linear-gradient(145deg, #565adf, #1a1b3a);
+  background: linear-gradient(145deg,
+    var(--logo-pink-dark),
+    var(--lavender-web));
   transform: translateY(-5px);
 }
 
@@ -545,60 +551,23 @@ header {
   font-family: var(--font-h3);
   font-size: 1.2rem;
   margin-bottom: 15px;
-  color: #7678ed;
+  color: var(--eerie-black);
   margin-bottom: 15px;
 }
 
 .service-item:hover h3 {
-  color: rgb(215, 164, 230);
+  color: var(--lavender-web);
 }
 
 .service-item p {
   font-size: 16px;
   margin-bottom: 20px;
-  color: #a0a3b1;
-}
-
-.service-icon {
-  font-size: 3.5rem;
-  color: var(--dream);
-  margin-bottom: 20px;
-}
-
-.cube-graphic {
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(45deg, #3a3eaf, #7678ed);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  transform: rotate(45deg);
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.cube-graphic::before,
-.cube-graphic::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  top: 0;
-  left: 0;
-  opacity: 0.7;
-  filter: blur(10px);
-}
-
-.cube-graphic::before {
-  transform: translateX(-10px) translateY(-10px);
-}
-
-.cube-graphic::after {
-  transform: translateX(10px) translateY(10px);
+  color: var(--eerie-black);
 }
 
 .btn-service {
-  background-color: #7678ed;
-  color: #fff;
+  background-color: var(--lavender-web);
+  color: var(--eerie-black);
   padding: 10px 20px;
   border-radius: 30px;
   text-decoration: none;
@@ -608,8 +577,8 @@ header {
 }
 
 .btn-service:hover {
-  background-color: rgb(215, 164, 230);
-  color: #7678ed;
+  background-color: var(--dream);
+  color: var(--lavender-web);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(118, 120, 237, 0.4);
 }
@@ -636,7 +605,6 @@ header {
   font-size: 2.5rem;
   margin-bottom: 40px;
   text-align: center;
-  color: #7678ed;
 }
 
 .filter-buttons {
@@ -646,8 +614,8 @@ header {
 
 .filter-btn {
   background-color: transparent;
-  border: 2px solid #7678ed;
-  color: #7678ed;
+  border: 2px solid var(--steel-pink);
+  color: var(--logo-pink-dark);
   padding: 10px 20px;
   margin: 0 5px;
   cursor: pointer;
@@ -656,7 +624,7 @@ header {
 
 .filter-btn.active,
 .filter-btn:hover {
-  background-color: #7678ed;
+  background-color: var(--logo-pink);
   color: white;
 }
 
@@ -666,20 +634,6 @@ header {
   right: 20px;
 }
 
-.nav-btn {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-left: 10px;
-  transition: color 0.3s ease;
-}
-
-.nav-btn:hover {
-  color: #7678ed;
-}
-
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -687,7 +641,7 @@ header {
 }
 
 .portfolio-item {
-  background: linear-gradient(145deg, #12132b, #1a1b3a);
+  background: linear-gradient(145deg, var(--lavender-web),    var(--dream));
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -697,11 +651,11 @@ header {
 .portfolio-item:hover {
   transform: translateY(-15px);
   box-shadow:
-    0 20px 50px rgba(118, 120, 237, 0.5),
+    0 10px 10px var(--logo-pink),
     /* Main shadow */
-    0 30px 60px rgba(118, 120, 237, 0.3),
+    0 10px 10px var(--logo-pink-dark),
     /* Secondary shadow */
-    0 40px 80px rgba(118, 120, 237, 0.2);
+    0 10px 10px var(--logo-pink-light);
   /* Tertiary shadow */
 }
 
@@ -728,7 +682,7 @@ header {
 
 .category {
   font-size: 0.8rem;
-  color: #7678ed;
+  color: var(--logo-pink-dark);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
@@ -743,7 +697,7 @@ header {
 
 .portfolio-item p {
   font-size: 0.9rem;
-  color: #a0a3b1;
+  color: var(--eerie-black);
 }
 
 @media (max-width: 768px) {
@@ -857,7 +811,7 @@ header {
 .testimonial-content blockquote {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--slate-blue);
+  color: var(--logo-pink-light);
   margin-bottom: 20px;
 }
 
@@ -908,7 +862,7 @@ header {
 
 .reason i {
   font-size: 3rem;
-  color: rgb(215, 164, 230);
+  color: var(--logo-pink-light);
   margin-bottom: 15px;
 }
 
@@ -924,7 +878,7 @@ header {
 
 /*Footer*/
 .site-footer {
-  background-color: var(--royal-blue-traditional);
+  background-color: var(--lavender-web);
   color: white;
   padding: 60px 0 0;
 }
