@@ -200,6 +200,12 @@ header {
   margin-bottom: 1rem;
 }
 
+.hero-protitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -216,70 +222,82 @@ header {
   border: 1px solid #666;
   background-color: #000;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  /* Add shadow for depth */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   opacity: 1;
   transform: translateY(50px);
-
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
 }
 
 #box1 {
   background-color: rgb(215, 164, 230);
 }
 
-#box1 p {
-  color: black;
-}
-
-#box1 h3 {
+#box1 p,
+#box1 h3,
+#box1 .subheading {
   color: black;
 }
 
 #box1 .box-icon {
   color: var(--royal-blue-traditional);
-  /* Change icon color */
 }
 
 .box:hover {
   transform: translateY(-10px);
-  background-color: rgb(215, 164, 230);
+  background-color: rgb(230, 179, 240);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
-.box:hover p {
-  color: black;
-}
-
-.box:hover h3 {
+.box:hover p,
+.box:hover h3,
+.box:hover .subheading {
   color: black;
 }
 
 .box:hover .box-icon {
   color: var(--royal-blue-traditional);
-  /* Change icon color */
 }
 
 .box-icon {
   font-size: 3rem;
-  /* Increase the icon size */
   margin-bottom: 1.5rem;
   color: var(--lavender-web);
-  /* Change icon color */
+  transition: color 0.3s ease-in-out;
 }
 
 .box h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: white;
+  letter-spacing: 0.05rem;
+}
+
+.box .subheading {
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: white;
+  letter-spacing: 0.03rem;
 }
 
 .box p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: white;
+  line-height: 1.8;
+  margin-bottom: 15px;
 }
 
+.content {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+  text-align: justify;
+}
 /* Base Button Styles */
 .custom-btn {
   display: inline-block;
