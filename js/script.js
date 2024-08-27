@@ -1,3 +1,8 @@
+window.addEventListener("scroll", function () {
+  var navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("sticky", window.scrollY > 0);
+});
+
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   // Register ScrollTrigger plugin
