@@ -3,6 +3,13 @@ window.addEventListener("scroll", function () {
   navbar.classList.toggle("sticky", window.scrollY > 0);
 });
 
+// Initialize the carousel with infinite loop and auto-slide
+var myCarousel = document.querySelector("#testimonial4");
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 3000,
+  wrap: true,
+});
+
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   // Register ScrollTrigger plugin

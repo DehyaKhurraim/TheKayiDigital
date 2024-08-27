@@ -260,11 +260,11 @@
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <!-- <img src="#" alt="" width="40" class="d-inline-block align-text-top"> -->
-                    <span style="color: rgb(215, 164, 230);">Kayi Digital.</span>
+                    <span style="color: #e154d7;">Kayi Digital.</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                    style="background-color: rgb(215, 164, 230); right: 0;">
+                    style="background-color: #e154d7; right: 0;">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -279,19 +279,14 @@
                             <a class="nav-link" href="aboutus.html">AboutUs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: rgb(215, 164, 230);">Portfolio</a>
+                            <a class="nav-link" href="#" style="color: #e154d7;">Portfolio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contactus.html">ContactUs</a>
                         </li>
                     </ul>
                     <div class="d-flex ms-3">
-                        <a href="https://www.instagram.com/" class="btn btn-link" style="color: rgb(215, 164, 230);"><i
-                                class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/" class="btn btn-link" style="color: rgb(215, 164, 230);"><i
-                                class="bi bi-linkedin"></i></a>
-                        <a href="https://www.behance.com/" class="btn btn-link" style="color: rgb(215, 164, 230);"><i
-                                class="bi bi-behance"></i></a>
+                        <a href="contactus.html" class="btn btn-primary custom-btn">Get Free Audit</a>
                     </div>
                 </div>
             </div>
@@ -302,13 +297,16 @@
         <section class="hero">
             <div class="container" style="margin-top: 10%;">
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-md-6 text-center">
+                    <div class="col-md-12 text-center">
                         <h1 class="hero-title">Our Creative Portfolio</h1>
                         <p class="hero-subtitle">Explore a collection of our successful projects and innovative
                             solutions that have empowered
                             businesses across various industries.</p>
-                        <a href="#portfolio-gallery" class="btn btn-primary custom-btn">View Our Work</a>
-
+                        <p class="hero-subtitle">At Kayi Digital, we take pride in our diverse portfolio that spans
+                            multiple sectors and showcases our versatility
+                            and creativity. From groundbreaking digital campaigns to cutting-edge software solutions,
+                            our work reflects our
+                            dedication to solving complex challenges and driving growth for our clients.</p>
                     </div>
                 </div>
             </div>
@@ -424,38 +422,66 @@
         </section>
 
 
-        <section class="testimonial">
+        <section class="testimonial text-center">
             <div class="container">
-                <h2 class="section-title">Our Customers</h2>
-                <p class="subtitle">Hear what our clients have to say about our services</p>
-
-                <div class="customer-logos">
-                    <img src="../images/customerLogo1.jpg" alt="Customer Logo 1">
-                    <img src="../images/customerLogo2.jpg" alt="Customer Logo 2">
-                    <img src="../images/customerLogo1.jpg" alt="Customer Logo 3">
-                    <img src="../images/customerLogo2.jpg" alt="Customer Logo 4">
-                </div>
-
-                <div class="testimonial-content">
-                    <blockquote>"Amazing Designs and Quality Work!"</blockquote>
-                    <p>Our experience with Marketing Agency has been exceptional. Their innovative strategies and
-                        creative
-                        designs have significantly boosted our online presence and customer engagement.</p>
-                    <div class="testimonial-author">
-                        <img src="../images/joe-done.jpg" alt="John Doe">
-                        <div>
-                            <h4>John Doe</h4>
-                            <p>CEO, ACME Inc.</p>
+                <div class="subtitle">What Our Clients Say About Us</div>
+                <div id="testimonial4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000"
+                    data-bs-wrap="true">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial4_slide">
+                                <img src="../images/joe-done.jpg" class="img-fluid" alt="Client 1" />
+                                <p>"Amazing Designs and Quality Work! Our experience with Kayi Digital has been
+                                    exceptional.
+                                    Their
+                                    innovative strategies and creative designs have significantly boosted our online
+                                    presence
+                                    and customer
+                                    engagement."</p>
+                                <h4>John Doe</h4>
+                                <p>CEO, ACME Inc.</p>
+                            </div>
                         </div>
+                        <div class="carousel-item">
+                            <div class="testimonial4_slide">
+                                <img src="../images/joe-done.jpg" class="img-fluid" alt="Client 2" />
+                                <p>"Unmatched Expertise! Working with the Marketing Wizards team has been a game-changer
+                                    for our
+                                    business.
+                                    Their personalized approach and relentless pursuit of excellence have skyrocketed
+                                    our brand
+                                    visibility
+                                    and
+                                    customer loyalty."</p>
+                                <h4>Jane Smith</h4>
+                                <p>Founder & CTO, Tech Innovations</p>
+                            </div>
+                        </div>
+                        <!-- Add more carousel items here if needed -->
+                    </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#testimonial4" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#testimonial4" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <!-- Add more indicators here if you add more carousel items -->
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="cta-box">
-                    <h3>Would you like to start a project with us?</h3>
-                    <p>Etiam erat lectus, finibus eget commodo quis, tincidunt eget leo. Nullam quis vulputate orci, ac
-                        accumsan
-                        quam. Morbi fringilla congue libero.</p>
-                    <a href="contactus.html" class="btn btn-primary custom-btn">ContactUs</a>
+        <section class="contact-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 contact-text animate-fade-up">
+                        <h2>“Let Us Help You”</h2>
+                        <p>We can help you bring your ideas to life. Let's talk about what we can build and raise
+                            together.</p>
+                        <button class="btn custom-btn">Connect with us!</button>
+                    </div>
+                    <div class="col-md-6 contact-image animate-fade-in">
+                        <img src="../images/team.jpg" alt="Team working together">
+                    </div>
                 </div>
             </div>
         </section>
@@ -467,7 +493,7 @@
                 <div class="col-md-3">
                     <a href="#" class="footer-logo">
                         <!-- <img src="../images/logo.png" alt="Digital Agency Logo"> -->
-                        <span>KAYI<br>DIGITAL</span>
+                        <span>Kayi<br>Digital</span>
                     </a>
                     <p class="footer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

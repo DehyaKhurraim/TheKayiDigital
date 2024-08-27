@@ -12,12 +12,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <style>
-        /* Updated Services Page Styles */
         .services-section {
             background-color: var(--eerie-black);
             padding: 80px 0;
             text-align: center;
-            margin-top: 10%;
         }
 
         .services-section .section-title {
@@ -29,12 +27,11 @@
 
         .services-section .section-subtitle {
             color: var(--lavender-web);
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 40px;
         }
 
         .services-grid {
-            margin-top: 40px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -42,19 +39,20 @@
         }
 
         .service-card {
-            background: linear-gradient(145deg, var(--dream), var(--logo-pink-dark));
+            background: var(--logo-pink-dark);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             border-radius: 15px;
             padding: 30px;
             text-align: center;
             transition: all 0.3s ease;
             width: 100%;
-            max-width: 350px;
+            margin: 0 auto;
+            /* Center the card horizontally */
         }
 
         .service-icon {
             font-size: 3.5rem;
-            color: var(--logo-pink-dark);
+            color: var(--dream);
             margin-bottom: 20px;
         }
 
@@ -69,44 +67,34 @@
             margin-bottom: 20px;
         }
 
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .service-card ul li {
+            color: white;
+            margin-bottom: 10px;
+        }
+
         .service-card:hover {
             transform: translateY(-10px);
-            background: linear-gradient(145deg, var(--logo-pink-dark), var(--lavender-web));
+            background: var(--dream);
         }
 
         .service-card:hover .service-icon {
-            font-size: 3.5rem;
             color: var(--lavender-web);
-            margin-bottom: 20px;
         }
 
         .service-card:hover h3 {
             color: var(--eerie-black);
-            font-size: 1.8rem;
-            margin-bottom: 15px;
         }
 
-        .service-card:hover p {
+        .service-card:hover p,
+        .service-card:hover ul li {
             color: var(--eerie-black);
-            margin-bottom: 20px;
-        }
-
-        .btn-service {
-            background-color: var(--dream);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-
-        .btn-service:hover {
-            background-color: var(--logo-pink-dark);
-            color: white;
-        }
-
-        .btn-service i {
-            margin-left: 5px;
         }
     </style>
 </head>
@@ -155,12 +143,23 @@
         style="background-image: url('../images/Image2.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
         <section class="hero">
             <div class="container" style="margin-top: 10%;">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-md-6 text-center">
-                        <h1 class="hero-title">Empowering Your Business</h1>
-                        <p class="hero-subtitle">Tailored, cutting-edge solutions to elevate your brand and drive
-                            success.</p>
-                        <a href="#services-details" class="btn btn-primary custom-btn">Book Free Consultation</a>
+                <div class="row justify-content-center align-items-center text-center" style="min-height: 80vh;">
+                    <div class="col-md-12 col-lg-12">
+                        <h1 class="hero-title">Empowering Your Business with Innovative Solutions and Unmatched
+                            Expertise</h1>
+                        <p class="hero-subtitle">
+                            At Kayi Digital, we specialize in providing tailored, cutting-edge solutions that are
+                            designed to elevate your brand and drive your success. Our team of experts is dedicated to
+                            understanding your unique challenges and crafting strategies that deliver measurable
+                            results. From
+                            comprehensive market analysis to bespoke implementation plans, we are committed to helping
+                            you
+                            achieve sustainable growth and stay ahead of the competition. Let us partner with you to
+                            transform
+                            your vision into reality and set new benchmarks for success in your industry.
+                        </p>
+                        <a href="contactus.html" class="btn btn-primary custom-btn">Book Your Free Consultation
+                            Today</a>
                     </div>
                 </div>
             </div>
@@ -169,46 +168,69 @@
         <section id="services-details" class="services-section">
             <div class="container">
                 <h2 class="section-title animate-fade-up">How can we help you?</h2>
-                <p class="section-subtitle animate-fade-up">Change is the Only Constant—So We Embrace It!</p>
+                <p class="section-subtitle">Change is the Only Constant—So We Embrace It!</p>
 
                 <div class="services-grid">
-                    <div class="service-card animate-fade-up">
+                    <div class="service-card animate-left">
                         <div class="service-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h3>Performance Marketing</h3>
-                        <p>Data-driven tactics that crank up your ROI and online presence.</p>
-                        <a href="performance-marketing.html" class="btn btn-service">Learn More <i
+                        <p>Ready to make your marketing budget work harder than a coffee-fueled intern? Our performance
+                            marketing services are designed to stretch every dollar, delivering results so good, you
+                            might just
+                            do a double-take. We craft campaigns that drive top-tier traffic and conversions, leaving no
+                            click
+                            unturned.</p>
+                        <a href="performance-marketing.html" class="btn btn-primary custom-btn">Learn More <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
 
-                    <div class="service-card animate-fade-up">
+                    <div class="service-card animate-right">
                         <div class="service-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
                         <h3>Business Optimisation</h3>
-                        <p>No-code solutions that cut the clutter and streamline your operations.</p>
-                        <a href="business-optimisation.html" class="btn btn-service">Learn More <i
+                        <p>Why work harder when you can work smarter? Our business optimization services are like a
+                            secret
+                            weapon for your operational efficiency. We’re here to help you ditch the manual grind and
+                            embrace
+                            automation, all without writing a single line of code. Get ready to watch your productivity
+                            soar—no
+                            caffeine required.</p>
+                        <a href="business-optimisation.html" class="btn btn-primary custom-btn">Learn More <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
 
-                    <div class="service-card animate-fade-up">
+                    <div class="service-card animate-left">
                         <div class="service-icon">
                             <i class="fas fa-laptop-code"></i>
                         </div>
                         <h3>Custom Software Solutions</h3>
-                        <p>Tailored CRM, web, and mobile apps that fit your business like a glove.</p>
-                        <a href="custom-software.html" class="btn btn-service">Learn More <i
+                        <p>Why settle for off-the-shelf when you can have it custom-built? Our software development
+                            services are
+                            like a tailored suit—designed to fit your business perfectly. We handle everything from
+                            design to
+                            deployment, creating scalable solutions that grow with you. Your business is unique, and
+                            your
+                            software should be too.</p>
+                        <a href="custom-software.html" class="btn btn-primary custom-btn">Learn More <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
 
-                    <div class="service-card animate-fade-up">
+                    <div class="service-card animate-right">
                         <div class="service-icon">
                             <i class="fas fa-users"></i>
                         </div>
                         <h3>Tailored Business Outsourcing</h3>
-                        <p>Flexible outsourcing that scales your business without the headaches.</p>
-                        <a href="business-outsourcing.html" class="btn btn-service">Learn More <i
+                        <p>Why juggle it all when you can focus on what you do best? Our business process outsourcing
+                            services
+                            are like having a trusted sidekick—handling the day-to-day tasks with precision so you can
+                            soar to
+                            new heights. From customer support to data management, we've got it covered, leaving you
+                            free to
+                            shine.</p>
+                        <a href="business-outsourcing.html" class="btn btn-primary custom-btn">Learn More <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -216,6 +238,69 @@
         </section>
 
 
+        <section class="testimonial text-center">
+            <div class="container">
+                <div class="subtitle">What Our Clients Say About Us</div>
+                <div id="testimonial4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000"
+                    data-bs-wrap="true">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial4_slide">
+                                <img src="../images/joe-done.jpg" class="img-fluid" alt="Client 1" />
+                                <p>"Amazing Designs and Quality Work! Our experience with Kayi Digital has been
+                                    exceptional.
+                                    Their
+                                    innovative strategies and creative designs have significantly boosted our online
+                                    presence
+                                    and customer
+                                    engagement."</p>
+                                <h4>John Doe</h4>
+                                <p>CEO, ACME Inc.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial4_slide">
+                                <img src="../images/joe-done.jpg" class="img-fluid" alt="Client 2" />
+                                <p>"Unmatched Expertise! Working with the Marketing Wizards team has been a game-changer
+                                    for our
+                                    business.
+                                    Their personalized approach and relentless pursuit of excellence have skyrocketed
+                                    our brand
+                                    visibility
+                                    and
+                                    customer loyalty."</p>
+                                <h4>Jane Smith</h4>
+                                <p>Founder & CTO, Tech Innovations</p>
+                            </div>
+                        </div>
+                        <!-- Add more carousel items here if needed -->
+                    </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#testimonial4" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#testimonial4" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <!-- Add more indicators here if you add more carousel items -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 contact-text animate-fade-up">
+                        <h2>“Let Us Help You”</h2>
+                        <p>We can help you bring your ideas to life. Let's talk about what we can build and raise
+                            together.</p>
+                        <button class="btn custom-btn">Connect with us!</button>
+                    </div>
+                    <div class="col-md-6 contact-image animate-fade-in">
+                        <img src="../images/team.jpg" alt="Team working together">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -224,7 +309,7 @@
                 <div class="col-md-3">
                     <a href="#" class="footer-logo">
                         <!-- <img src="../images/logo.png" alt="Digital Agency Logo"> -->
-                        <span>KAYI<br>DIGITAL</span>
+                        <span>Kayi<br>Digital</span>
                     </a>
                     <p class="footer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -269,7 +354,6 @@
             </div>
         </div>
     </footer>
-
     <!-- Bootstrap JS and dependencies -->
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/popper.min.js"></script>
