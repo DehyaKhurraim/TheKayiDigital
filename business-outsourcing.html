@@ -12,15 +12,16 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <style>
+        /* Hero Section */
         .hero {
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(45deg, #1f1e1e, var(--dream));
-            /* Gradient from eerie-black to royal-blue-traditional */
             position: relative;
             overflow: hidden;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
         }
 
         .hero::before {
@@ -52,53 +53,55 @@
             text-align: center;
             z-index: 1;
             color: #ccd0e7;
-            /* lavender-web */
+            font-size: 1.2rem;
+            font-weight: bold;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 5rem;
             margin-bottom: 1rem;
             color: rgb(215, 164, 230);
-            /* dream */
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .hero .subtitle {
-            font-size: 1.5rem;
+            font-size: 2rem;
             margin-bottom: 2rem;
             color: #ccd0e7;
-            /* lavender-web */
+            font-weight: bold;
         }
 
         .hero .cta-button {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 20px 40px;
             background-color: rgb(215, 164, 230);
-            /* dream */
             color: #1f1e1e;
-            /* eerie-black */
             text-decoration: none;
             border-radius: 30px;
             font-weight: bold;
             transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .hero .cta-button:hover {
             background-color: #ccd0e7;
-            /* lavender-web */
             color: #1f1e1e;
-            /* eerie-black */
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(215, 164, 230, 0.3);
         }
 
+        /* Service Details Section */
         .service-details {
             padding: 80px 0;
             background-color: var(--lavender-web);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
         }
 
         .service-details h2 {
             color: var(--logo-pink);
             margin-bottom: 20px;
+            font-size: 3rem;
+            font-weight: bold;
         }
 
         .service-details ul {
@@ -110,6 +113,8 @@
             margin-bottom: 10px;
             position: relative;
             padding-left: 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
 
         .service-details ul li:before {
@@ -119,39 +124,27 @@
             position: absolute;
             left: 0;
             color: var(--logo-pink-dark);
+            font-size: 1.5rem;
         }
 
-        .cta-box {
-            background-color: var(--dream);
-            border-radius: 15px;
-            padding: 50px;
-            text-align: center;
-            color: white;
-            margin-top: 60px;
+        /* Service Description Section */
+        .service-description {
+            padding: 50px 0;
+            background-color: #f7f7f7;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
         }
 
-        .cta-box h3 {
-            font-size: 2rem;
+        .service-description h3 {
+            font-size: 2.5rem;
             margin-bottom: 20px;
+            color: var(--logo-pink);
+            font-weight: bold;
         }
 
-        .cta-box p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-
-        .cta-box .custom-btn {
-            background-color: white;
-            color: var(--logo-pink-dark);
+        .service-description p {
             font-size: 1.2rem;
-            padding: 12px 30px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .cta-box .custom-btn:hover {
-            background-color: var(--slate-blue);
-            color: white;
+            margin-bottom: 30px;
+            color: #666;
         }
     </style>
 </head>
@@ -220,6 +213,7 @@
                 <a href="#service-details" class="cta-button animate-fade-up">Get Started</a>
             </div>
         </section>
+
         <section class="service-details" id="service-details">
             <div class="container">
                 <div class="row">
@@ -245,14 +239,142 @@
             </div>
         </section>
 
-        <!-- Testimonial Section -->
-        <section class="testimonial">
+        <section class="service-description">
             <div class="container">
-                <div class="cta-box">
-                    <h3>Need help with your business operations?</h3>
-                    <p>Our outsourcing services can help you improve efficiency and reduce costs across various
-                        business functions.</p>
-                    <a href="contactus.html" class="btn btn-primary custom-btn">Contact Us</a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Customer Service Outsourcing</h3>
+                        <p>Provide exceptional customer service without the hassle of managing it in-house. Our customer
+                            service
+                            outsourcing solutions are designed to provide a seamless customer experience, increase
+                            customer
+                            satisfaction, and reduce costs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-description">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Technical Support</h3>
+                        <p>Get technical support services that are designed to provide timely and effective solutions to
+                            your
+                            technical issues. Our technical support team is trained to handle a wide range of technical
+                            issues,
+                            ensuring that your business operations are not disrupted.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-description">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Data Entry and Processing</h3>
+                        <p>Accurately and efficiently manage your data with our data entry and processing services. Our
+                            team of
+                            experts is trained to handle large volumes of data, ensuring that your data is accurate,
+                            up-to-date,
+                            and secure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-description">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>HR and Payroll Solutions</h3>
+                        <p>Streamline your HR and payroll operations with our comprehensive solutions. Our HR and
+                            payroll
+                            services are designed to provide a seamless employee experience, reduce administrative
+                            burdens, and
+                            ensure compliance with regulatory requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-description">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>IT Support Services</h3>
+                        <p>Get comprehensive IT support services that are designed to provide timely and effective
+                            solutions to
+                            your IT issues. Our IT support team is trained to handle a wide range of IT issues, ensuring
+                            that
+                            your business operations are not disrupted.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonial text-center">
+            <div class="container">
+                <div class="subtitle">What Our Clients Say About Us</div>
+                <div id="testimonial4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000"
+                    data-bs-wrap="true">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial4_slide">
+                                <img src="../images/joe-done.jpg" class="img-fluid" alt="Client 1" />
+                                <p>"Amazing Designs and Quality Work! Our experience with Kayi Digital has been
+                                    exceptional.
+                                    Their
+                                    innovative strategies and creative designs have significantly boosted our online
+                                    presence
+                                    and customer
+                                    engagement."</p>
+                                <h4>John Doe</h4>
+                                <p>CEO, ACME Inc.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial4_slide">
+                                <img src="../images/joe-done.jpg" class="img-fluid" alt="Client 2" />
+                                <p>"Unmatched Expertise! Working with the Marketing Wizards team has been a game-changer
+                                    for our
+                                    business.
+                                    Their personalized approach and relentless pursuit of excellence have skyrocketed
+                                    our brand
+                                    visibility
+                                    and
+                                    customer loyalty."</p>
+                                <h4>Jane Smith</h4>
+                                <p>Founder & CTO, Tech Innovations</p>
+                            </div>
+                        </div>
+                        <!-- Add more carousel items here if needed -->
+                    </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#testimonial4" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#testimonial4" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <!-- Add more indicators here if you add more carousel items -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 contact-text animate-fade-up">
+                        <h2>“Let Us Help You”</h2>
+                        <p>We can help you bring your ideas to life. Let's talk about what we can build and raise
+                            together.</p>
+                        <button class="btn custom-btn">Connect with us!</button>
+                    </div>
+                    <div class="col-md-6 contact-image animate-fade-in">
+                        <img src="../images/team.jpg" alt="Team working together">
+                    </div>
                 </div>
             </div>
         </section>
@@ -264,7 +386,7 @@
                 <div class="col-md-3">
                     <a href="#" class="footer-logo">
                         <!-- <img src="../images/logo.png" alt="Digital Agency Logo"> -->
-                        <span>KAYI<br>DIGITAL</span>
+                        <span>Kayi<br>Digital</span>
                     </a>
                     <p class="footer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
