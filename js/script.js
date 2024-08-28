@@ -3,6 +3,42 @@ window.addEventListener("scroll", function () {
   navbar.classList.toggle("sticky", window.scrollY > 0);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var servicesDropdown = document.getElementById("servicesDropdown");
+  var dropdownMenu = servicesDropdown.nextElementSibling;
+
+  servicesDropdown.addEventListener("click", function (e) {
+    if (window.innerWidth > 992) {
+      // Only for desktop view
+      e.preventDefault();
+      window.location.href = "services.html";
+    }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (e) {
+    if (
+      !servicesDropdown.contains(e.target) &&
+      !dropdownMenu.contains(e.target)
+    ) {
+      dropdownMenu.style.display = "none";
+    }
+  });
+
+  // Show dropdown on hover for desktop
+  servicesDropdown.addEventListener("mouseenter", function () {
+    if (window.innerWidth > 992) {
+      dropdownMenu.style.display = "block";
+    }
+  });
+
+  servicesDropdown.parentElement.addEventListener("mouseleave", function () {
+    if (window.innerWidth > 992) {
+      dropdownMenu.style.display = "none";
+    }
+  });
+});
+
 // Initialize the carousel with infinite loop and auto-slide
 var myCarousel = document.querySelector("#testimonial4");
 var carousel = new bootstrap.Carousel(myCarousel, {
