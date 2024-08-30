@@ -11,6 +11,45 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .phone-mockup {
+      position: relative;
+      max-width: 400rem;
+      /* Increased the size of the phone */
+      margin: 0 auto;
+    }
+
+    .phone-frame {
+      width: 150%;
+      min-height: 10rem;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    .phone-video {
+      position: absolute;
+      top: 12%;
+      left: 48%;
+      width: 240px;
+      height: 510px;
+      object-fit: cover;
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    @media (min-width: 768px) {
+      .phone-mockup {
+        max-width: 450px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -63,127 +102,51 @@
 
   <main>
     <section class="hero" style="background-image: url('../images/hero.jpg');">
-      <div class="container" style="margin-top: 10%;">
+      <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <h1 class="hero-title">World-Class Software Solutions For Business Across The Globe.</h1>
-            <p class="hero-subtitle">DISCOVERY . DESIGN . DEVELOPMENT . TESTING</p>
-            <a href="contactus.html" class="btn btn-primary custom-btn">Book a Free Consultation</a>
+            <h1 class="hero-title">Your Ecommerce Growth Agency</h1>
+            <p class="hero-subtitle">
+              We help e-commerce brands scale by bringing data driven decisions and creativity
+              together for a full-funnel marketing approach.
+            </p>
+            <a href="contactus.html" class="btn btn-primary custom-btn">Book A Free Consultation</a>
           </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="boxes">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <a href="aboutus.html">
-                    <div class="box" id="box1">
-                      <div class="box-icon">
-                        <i class="fas fa-bullseye"></i> <!-- Icon for "What We Do?" -->
-                      </div>
-                      <h3>What We Do?</h3>
-                      <p class="subheading">Turning Mundane Into Magnificent!</p>
-                      <p class="content">We supercharge businesses of all sizes with performance marketing, business
-                        automation,
-                        custom software solutions, and outsourcing. Why settle for ordinary when you can have
-                        extraordinary?</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4">
-                  <a href="aboutus.html">
-                    <div class="box">
-                      <div class="box-icon">
-                        <i class="fas fa-cogs"></i> <!-- Icon for "How We Do?" -->
-                      </div>
-                      <h3>How We Do?</h3>
-                      <p class="subheading">By Mixing Magic with Metrics!</p>
-                      <p class="content">With cutting-edge strategies and a pinch of automation wizardry, we deliver
-                        results that
-                        make your competitors go, "Wait, what just happened?"</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4">
-                  <a href="aboutus.html">
-                    <div class="box">
-                      <div class="box-icon">
-                        <i class="fas fa-hands-helping"></i> <!-- Icon for "We Offer" -->
-                      </div>
-                      <h3>We Offer</h3>
-                      <p class="subheading">Brains, Brawn, and a Whole Lot of Fun!</p>
-                      <p class="content">Our expert team of marketing maestros and tech geniuses is here to boost your
-                        brand’s
-                        visibility, one clever campaign at a time. Because who says business can't be fun?</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+          <div class="col-md-6">
+            <div class="phone-mockup">
+              <img src="images/phone_035-removebg-preview.png" alt="Phone Mockup" class="phone-frame">
+              <video autoplay loop muted playsinline class="phone-video">
+                <source src="images/6561920-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
-
         </div>
-      </div>
       </div>
     </section>
 
-    <section class="about-us">
+
+    <section class="kayi-blueprint">
       <div class="container">
-        <h1 class="section-title animate-fade-up"></h1>
-        <h3 class="subtitle animate-fade-up">WE'RE MORE THAN A DIGITAL AGENCY</h3>
-
-        <div class="row">
-          <div class="col-md-8">
-            <div class="team-image main-image animate-fade-in">
-              <img src="../images/team.jpg" alt="Team collaborating">
-              <div class="image-caption">Team<br>Passionate and creative</div>
-            </div>
+        <div class="row align-items-center">
+          <div class="col-md-6 text-section">
+            <h2>Announcing The KAYI Blueprint</h2>
+            <h1>APPLY IF YOU WANT TO INCREASE YOUR REVENUE IN THE NEXT 90 DAYS</h1>
           </div>
-          <div class="col-md-4">
-            <div class="team-image secondary-image animate-fade-in">
-              <img src="../images/team.jpg" alt="Team meeting">
-              <div class="image-caption">Vision<br>Clear and vivid</div>
-            </div>
-            <div class="team-image secondary-image animate-fade-in">
-              <img src="../images/team.jpg" alt="Team discussion">
-              <div class="image-caption">Team<br>Ambitious</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-md-4 animate-fade-up">
-            <h2>Who We Are</h2>
-            <p>At Kayi Digital, we’re not just a digital marketing agency; we’re the secret sauce behind businesses that
-              go from ‘meh’
-              to ‘whoa!’ Our award-winning team combines creativity with data-driven insights to craft solutions that
-              don’t just meet
-              expectations—they shatter them.</p>
-          </div>
-          <div class="col-md-4 animate-fade-up">
-            <h2>Our Philosophy</h2>
-            <p>In a world where digital trends change faster than you can say “algorithm,” we stay ahead of the curve.
-              At Kayi Digital,
-              innovation isn’t just a buzzword—it’s our mantra. We continuously refine our strategies to keep your brand
-              shining in a
-              sea of sameness.</p>
-          </div>
-          <div class="col-md-4 animate-fade-up">
-            <h2>How We Work</h2>
-            <p>We believe the best results come from working together, so we roll up our sleeves and dive deep into your
-              business. By
-              understanding your objectives and analyzing market trends, we create solutions that aren’t just
-              comprehensive—they’re
-              downright game-changing.</p>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="text-center mt-5">
-            <a href="about-us.html" class="btn btn-primary custom-btn">Learn More</a>
+          <div class="col-md-6 cta-section">
+            <p class="cta-heading">The KAYI Blueprint delivers superior marketing strategies and faster results.</p>
+            <p>Within 30 days, you’ll have an actionable, winning marketing strategy, and within 90 days, you’ll be
+              driving
+              results—or your money back.</p>
+            <p>With The KAYI Blueprint, it's easier than ever to hit your business goals and elevate your organization
+              to
+              new heights.</p>
+            <a href="contactus.html" class="btn btn-primary custom-btn">Apply to receive the KAYI Blueprint today!</a>
           </div>
         </div>
       </div>
     </section>
+
 
     <section class="services">
       <div class="container">
@@ -222,127 +185,105 @@
       </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio-section">
       <div class="container">
-        <h2 class="section-title">Portfolio</h2>
-
-        <!-- Filter buttons from Design #1 -->
+        <h2 class="subtitle">
+          Featured Projects</h2>
         <div class="filter-buttons">
           <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="Marketing">Marketing</button>
-          <button class="filter-btn" data-filter="Optimisation">Optimisation</button>
-          <button class="filter-btn" data-filter="Custom">Custom Software Solutions</button>
-          <button class="filter-btn" data-filter="Outsourcing">Outsourcing</button>
+          <button class="filter-btn" data-filter="marketing">Marketing</button>
+          <button class="filter-btn" data-filter="optimization">Optimization</button>
+          <button class="filter-btn" data-filter="software">Software Solutions</button>
+          <button class="filter-btn" data-filter="outsourcing">Outsourcing</button>
         </div>
-
-        <!-- Portfolio grid combining elements from both designs -->
         <div class="portfolio-grid">
-          <div class="portfolio-item Marketing">
-            <div class="portfolio-image" style="background-image: url('../images/customerLogo1.jpg');"></div>
+          <div class="portfolio-item marketing">
+            <img src="images/Marketing1.png" alt="Marketing Project 1">
             <div class="portfolio-content">
-              <span class="category">Performance Marketing</span>
-              <h3>Modern Living Space</h3>
-              <p>Data-driven strategies to boost your ROI and online presence.</p>
+              <h3>Performance Marketing</h3>
+              <p>Showcasing the custom logo we designed for Chay Express—where creativity meets brand
+                identity.
+                <br>
+                <br>
+              </p>
             </div>
           </div>
-          <div class="portfolio-item Optimisation">
-            <div class="portfolio-image" style="background-image: url('../images/customerLogo2.jpg');"></div>
+          <div class="portfolio-item marketing">
+            <img src="images/Marketing2.png" alt="Marketing Project 2">
             <div class="portfolio-content">
-              <span class="category">Business Optimisation</span>
-              <h3>Contemporary Office Building</h3>
-              <p>No-code development solutions to streamline your operations.</p>
+              <h3>Performance Marketing</h3>
+              <p>Take a peek at the Meta ads we whipped up! See how we make campaigns that catch eyes and
+                drive results.
+                <br>
+                <br>
+              </p>
             </div>
           </div>
-          <div class="portfolio-item Custom">
-            <div class="portfolio-image" style="background-image: url('../images/joe-done.jpg');"></div>
+          <div class="portfolio-item optimization">
+            <img src="images/BussinessOptimization1.png" alt="Optimization Project 1">
             <div class="portfolio-content">
-              <span class="category">Custom Software Solutions</span>
-              <h3>Smart Home Device</h3>
-              <p>Tailored CRM, web, and mobile apps for your unique needs.</p>
+              <h3>Business Optimisation</h3>
+              <p>Discover the pregnancy tracker app we designed using no-code development! Tailored to
+                make tracking and celebrating
+                every milestone a breeze.</p>
             </div>
           </div>
-          <div class="portfolio-item Outsourcing">
-            <div class="portfolio-image" style="background-image: url('../images/team.jpg');"></div>
+          <div class="portfolio-item software">
+            <img src="images/CRM1.png" alt="Software Solutions Project 1">
             <div class="portfolio-content">
-              <span class="category">Tailored Business Outsourcing</span>
-              <h3>Modern Living Space</h3>
-              <p>Flexible outsourcing solutions to scale your business efficiently.</p>
+              <h3>Custom Software Solutions</h3>
+              <p>We built a custom inventory system with real-time updates and automated alerts,
+                seamlessly integrating with their sales
+                platform to enhance efficiency and accuracy.</p>
             </div>
           </div>
-          <div class="portfolio-item Marketing">
-            <div class="portfolio-image" style="background-image: url('../images/customerLogo1.jpg');"></div>
+          <div class="portfolio-item optimization">
+            <img src="images/BussinessOptimization2.png" alt="Optimization Project 2">
             <div class="portfolio-content">
-              <span class="category">Performance Marketing</span>
-              <h3>Modern Living Space</h3>
-              <p>Data-driven strategies to boost your ROI and online presence.</p>
+              <h3>Business Optimisation</h3>
+              <p>Check out the code we developed to simplify email filing—connecting Gmail to Excel for
+                seamless order tracking and
+                management.</p>
             </div>
           </div>
-          <div class="portfolio-item Optimisation">
-            <div class="portfolio-image" style="background-image: url('../images/customerLogo2.jpg');"></div>
+          <div class="portfolio-item software">
+            <img src="images/CRM2.png" alt="Software Solutions Project 2">
             <div class="portfolio-content">
-              <span class="category">Business Optimisation</span>
-              <h3>Contemporary Office Building</h3>
-              <p>No-code development solutions to streamline your operations.</p>
+              <h3>Custom Software Solutions</h3>
+              <p>We designed a bespoke CRM system for a client to manage their customer interactions more
+                effectively using platforms
+                like make.com.</p>
             </div>
           </div>
-          <div class="portfolio-item Custom">
-            <div class="portfolio-image" style="background-image: url('../images/joe-done.jpg');"></div>
+          <div class="portfolio-item optimization">
+            <img src="images/BussinessOptimization3.png" alt="Optimization Project 3">
             <div class="portfolio-content">
-              <span class="category">Custom Software Solutions</span>
-              <h3>Smart Home Device</h3>
-              <p>Tailored CRM, web, and mobile apps for your unique needs.</p>
+              <h3>Business Optimisation</h3>
+              <p>See how we built a KPI analyzer for our client’s Instagram account—automatically tracking
+                performance metrics and
+                insights to drive strategy.
+              </p>
             </div>
           </div>
-          <div class="portfolio-item Outsourcing">
-            <div class="portfolio-image" style="background-image: url('../images/team.jpg');"></div>
+          <div class="portfolio-item outsourcing">
+            <img src="images/Outsourcing1.PNG" alt="Outsourcing Project 1">
             <div class="portfolio-content">
-              <span class="category">Tailored Business Outsourcing</span>
-              <h3>Modern Living Space</h3>
-              <p>Flexible outsourcing solutions to scale your business efficiently.</p>
-            </div>
-          </div>
-          <div class="portfolio-item Marketing">
-            <div class="portfolio-image" style="background-image: url('../images/customerLogo1.jpg');"></div>
-            <div class="portfolio-content">
-              <span class="category">Performance Marketing</span>
-              <h3>Modern Living Space</h3>
-              <p>Data-driven strategies to boost your ROI and online presence.</p>
-            </div>
-          </div>
-          <div class="portfolio-item Optimisation">
-            <div class="portfolio-image" style="background-image: url('../images/customerLogo2.jpg');"></div>
-            <div class="portfolio-content">
-              <span class="category">Business Optimisation</span>
-              <h3>Contemporary Office Building</h3>
-              <p>No-code development solutions to streamline your operations.</p>
-            </div>
-          </div>
-          <div class="portfolio-item Custom">
-            <div class="portfolio-image" style="background-image: url('../images/joe-done.jpg');"></div>
-            <div class="portfolio-content">
-              <span class="category">Custom Software Solutions</span>
-              <h3>Smart Home Device</h3>
-              <p>Tailored CRM, web, and mobile apps for your unique needs.</p>
-            </div>
-          </div>
-          <div class="portfolio-item Outsourcing">
-            <div class="portfolio-image" style="background-image: url('../images/team.jpg');"></div>
-            <div class="portfolio-content">
-              <span class="category">Tailored Business Outsourcing</span>
-              <h3>Modern Living Space</h3>
-              <p>Flexible outsourcing solutions to scale your business efficiently.</p>
+              <h3>Convenient Outsourcing</h3>
+              <p>We took over customer support for a client, tackling inquiries and resolving issues, so
+                they could concentrate on what
+                they do best. The result? Happier customers and lower costs!</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
     <!-- Why Choose Us Section -->
     <section class="why-choose-us">
       <div class="container">
-        <h2 class="section-title" style="color: #ccd0e7ff;">Why Choose Us</h2>
-        <p class="subtitle" style="color: #ccd0e7ff">Elevate your brand with our expert marketing solutions
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="subtitle">Elevate your brand with our
+          expert marketing solutions
         </p>
 
         <div class="reasons-grid">
@@ -374,43 +315,76 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonial text-center">
+    <!-- Testimonial Section -->
+    <section class="testimonials">
       <div class="container">
-        <div class="subtitle">What Our Clients Say About Us</div>
-        <div id="testimonial4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000"
-          data-bs-wrap="true">
+        <h2 class="section-title">Testimonials</h2>
+        <div id="testimonials-slider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
           <div class="carousel-inner">
+            <!-- Testimonial 1 & 2 -->
             <div class="carousel-item active">
-              <div class="testimonial4_slide">
-                <img src="../images/joe-done.jpg" class="img-fluid" alt="Client 1" />
-                <p>"Amazing Designs and Quality Work! Our experience with Kayi Digital has been exceptional. Their
-                  innovative strategies and creative designs have significantly boosted our online presence and customer
-                  engagement."</p>
-                <h4>John Doe</h4>
-                <p>CEO, ACME Inc.</p>
+              <div class="d-flex justify-content-between">
+                <div class="testimonial-item">
+                  <img src="images/customerLogo1.jpg" alt="Testimonial 1">
+                  <div class="testimonial-content">
+                    <p>"Working with this team has been a game-changer for our business. Their expertise and dedication
+                      are
+                      unmatched!"</p>
+                    <h4>John Doe</h4>
+                    <span>CEO, Company XYZ</span>
+                  </div>
+                </div>
+                <div class="testimonial-item">
+                  <img src="images/customerLogo2.jpg" alt="Testimonial 2">
+                  <div class="testimonial-content">
+                    <p>"The results we've achieved together are outstanding. I highly recommend their services to
+                      anyone."
+                    </p>
+                    <h4>Jane Smith</h4>
+                    <span>Founder, Startup ABC</span>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- Testimonial 3 & 4 (Add more as needed) -->
             <div class="carousel-item">
-              <div class="testimonial4_slide">
-                <img src="../images/joe-done.jpg" class="img-fluid" alt="Client 2" />
-                <p>"Unmatched Expertise! Working with the Marketing Wizards team has been a game-changer for our
-                  business.
-                  Their personalized approach and relentless pursuit of excellence have skyrocketed our brand visibility
-                  and
-                  customer loyalty."</p>
-                <h4>Jane Smith</h4>
-                <p>Founder & CTO, Tech Innovations</p>
+              <div class="d-flex justify-content-between">
+                <div class="testimonial-item">
+                  <img src="images/customerLogo2.jpg" alt="Testimonial 3">
+                  <div class="testimonial-content">
+                    <p>"A fantastic experience from start to finish. The team exceeded all of our expectations."</p>
+                    <h4>Emily Johnson</h4>
+                    <span>Marketing Director, Lifestyle Co.</span>
+                  </div>
+                </div>
+                <div class="testimonial-item">
+                  <img src="images/customerLogo1.jpg" alt="Testimonial 4">
+                  <div class="testimonial-content">
+                    <p>"Exceptional service and incredible results. We couldn't have asked for a better partnership."
+                    </p>
+                    <h4>Michael Brown</h4>
+                    <span>COO, Fintech Ltd.</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- Add more carousel items here if needed -->
           </div>
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#testimonial4" data-bs-slide-to="0" class="active" aria-current="true"
-              aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#testimonial4" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <!-- Add more indicators here if you add more carousel items -->
+            <button type="button" data-bs-target="#testimonials-slider" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#testimonials-slider" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonials-slider"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonials-slider"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </section>

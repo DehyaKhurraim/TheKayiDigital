@@ -12,89 +12,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <style>
-        /* Portfolio Page Styles */
-
-        .portfolio-grid {
-            background-color: var(--lavender-web);
-            padding: 80px 0;
-        }
-
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-
-        .filter-btn {
-            background-color: transparent;
-            border: 2px solid var(--slate-blue);
-            color: var(--slate-blue);
-            padding: 10px 20px;
-            margin: 0 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            background-color: var(--slate-blue);
-            color: white;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-item img {
-            width: 100%;
-            height: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .project-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .project-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .project-item:hover .project-overlay {
-            opacity: 1;
-        }
-
-        .project-overlay h3 {
-            color: white;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .project-overlay p {
-            color: var(--lavender-web);
-            text-align: center;
-            padding: 0 20px;
-        }
-
         /* Case Studies Styles */
         .case-studies {
             background-color: var(--eerie-black);
@@ -102,16 +19,10 @@
             color: white;
         }
 
-        .case-study-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
         .case-study-item {
             position: relative;
-            flex-basis: calc(50% - 20px);
-            margin-bottom: 40px;
+            width: 48%;
+            margin-bottom: 20px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             overflow: hidden;
@@ -119,20 +30,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .case-study-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            background-color: var(--dream);
+        .case-study-item video {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         .case-study-item img {
             width: 100%;
             height: auto;
             transition: transform 0.3s ease;
-        }
-
-        .case-study-item:hover img {
-            transform: scale(1.05);
         }
 
         .case-study-content {
@@ -153,14 +61,6 @@
             color: var(--light-gray);
         }
 
-        .case-study-content:hover h3 {
-            color: var(--eerie-black);
-        }
-
-        .case-study-content:hover p {
-            color: var(--eerie-black);
-        }
-
         .case-study-content a.btn-primary {
             background-color: var(--slate-blue);
             color: white;
@@ -178,77 +78,41 @@
             background-color: var(--dark-blue);
         }
 
-
-        /* Testimonials Styles */
-
-        .testimonial-content {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .testimonial-content blockquote {
-            font-style: italic;
-            color: var(--royal-blue-traditional);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .testimonial-content p {
-            color: var(--eerie-black);
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .testimonial-author img {
+        .carousel-control-prev,
+        .carousel-control-next {
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--eerie-black);
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            margin-right: 15px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
         }
 
-        .testimonial-author h4 {
-            color: var(--royal-blue-traditional);
-            margin-bottom: 5px;
+        .carousel-control-prev {
+            left: 20px;
         }
 
-        .cta-box {
-            background-color: var(--royal-blue-traditional);
-            border-radius: 15px;
-            padding: 50px;
-            text-align: center;
-            color: white;
-            margin-top: 60px;
+        .carousel-control-next {
+            right: 20px;
         }
 
-        .cta-box h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .carousel-indicators {
+            bottom: 20px;
         }
 
-        .cta-box p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--eerie-black);
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
         }
 
-        .cta-box .custom-btn {
-            background-color: white;
-            color: var(--royal-blue-traditional);
-            font-size: 1.2rem;
-            padding: 12px 30px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .cta-box .custom-btn:hover {
-            background-color: var(--slate-blue);
-            color: white;
+        .carousel-indicators button.active {
+            opacity: 1;
         }
     </style>
 </head>
@@ -272,27 +136,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
-                                role="button">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="performance-marketing.html">Performance Marketing</a>
-                                </li>
-                                <li><a class="dropdown-item" href="business-optimisation.html">Business Optimisation</a>
-                                </li>
-                                <li><a class="dropdown-item" href="custom-software.html">Custom Software Solutions</a>
-                                </li>
-                                <li><a class="dropdown-item" href="business-outsourcing.html">Business Outsourcing</a>
-                                </li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="services.html">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="aboutus.html">AboutUs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html" style="color: #e154d7;">Portfolio</a>
+                            <a class="nav-link" href="#" style="color: #e154d7;">Portfolio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contactus.html">ContactUs</a>
@@ -311,11 +162,14 @@
             <div class="container" style="margin-top: 10%;">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-12 text-center">
-                        <h1 class="hero-title">Our Creative Portfolio</h1>
-                        <p class="hero-subtitle">Explore a collection of our successful projects and innovative
+                        <h1 class="hero-title" style="font-size: 3rem;">Our Creative Portfolio</h1>
+                        <p class="hero-subtitle" style="font-size: 1.5rem;">Explore a collection of our successful
+                            projects and innovative
                             solutions that have empowered
                             businesses across various industries.</p>
-                        <p class="hero-subtitle">At Kayi Digital, we take pride in our diverse portfolio that spans
+                        <p class="hero-subtitle" style="font-size: 1.5rem;">At Kayi Digital, we take pride in our
+                            diverse
+                            portfolio that spans
                             multiple sectors and showcases our versatility
                             and creativity. From groundbreaking digital campaigns to cutting-edge software solutions,
                             our work reflects our
@@ -325,11 +179,10 @@
             </div>
         </section>
 
-        <section class="portfolio-grid" id="portfolio-gallery">
+        <section class="portfolio-section">
             <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-
-                <!-- Filter Options -->
+                <h2 class="subtitle" style="margin-bottom: 40px;">
+                    Featured Projects</h2>
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="marketing">Marketing</button>
@@ -337,69 +190,82 @@
                     <button class="filter-btn" data-filter="software">Software Solutions</button>
                     <button class="filter-btn" data-filter="outsourcing">Outsourcing</button>
                 </div>
-
-                <!-- Project Grid -->
-                <div class="project-grid">
-                    <!-- Project Item 1 -->
-                    <div class="project-item marketing">
-                        <img src="../images/customerLogo1.jpg" alt="Project 1">
-                        <div class="project-overlay">
-                            <h3>Digital Marketing Campaign</h3>
-                            <p>Boosted online presence for a tech startup</p>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item marketing">
+                        <img src="images/Marketing1.png" alt="Marketing Project 1">
+                        <div class="portfolio-content">
+                            <h3>Performance Marketing</h3>
+                            <p>Showcasing the custom logo we designed for Chay Express—where creativity meets brand
+                                identity.
+                                <br>
+                                <br>
+                            </p>
                         </div>
                     </div>
-
-                    <!-- Project Item 2 -->
-                    <div class="project-item optimization">
-                        <img src="../images/team.jpg" alt="Project 2">
-                        <div class="project-overlay">
-                            <h3>E-commerce Optimization</h3>
-                            <p>Increased conversion rates by 40%</p>
+                    <div class="portfolio-item marketing">
+                        <img src="images/Marketing2.png" alt="Marketing Project 2">
+                        <div class="portfolio-content">
+                            <h3>Performance Marketing</h3>
+                            <p>Take a peek at the Meta ads we whipped up! See how we make campaigns that catch eyes and
+                                drive results.
+                                <br>
+                                <br>
+                            </p>
                         </div>
                     </div>
-
-                    <!-- Project Item 3 -->
-                    <div class="project-item software">
-                        <img src="../images/joe-done.jpg" alt="Project 3">
-                        <div class="project-overlay">
-                            <h3>Custom CRM Solution</h3>
-                            <p>Streamlined operations for a finance firm</p>
+                    <div class="portfolio-item optimization">
+                        <img src="images/BussinessOptimization1.png" alt="Optimization Project 1">
+                        <div class="portfolio-content">
+                            <h3>Business Optimisation</h3>
+                            <p>Discover the pregnancy tracker app we designed using no-code development! Tailored to
+                                make tracking and celebrating
+                                every milestone a breeze.</p>
                         </div>
                     </div>
-
-                    <!-- Project Item 1 -->
-                    <div class="project-item marketing">
-                        <img src="../images/Image4.png" alt="Project 1">
-                        <div class="project-overlay">
-                            <h3>Digital Marketing Campaign</h3>
-                            <p>Boosted online presence for a tech startup</p>
+                    <div class="portfolio-item software">
+                        <img src="images/CRM1.png" alt="Software Solutions Project 1">
+                        <div class="portfolio-content">
+                            <h3>Custom Software Solutions</h3>
+                            <p>We built a custom inventory system with real-time updates and automated alerts,
+                                seamlessly integrating with their sales
+                                platform to enhance efficiency and accuracy.</p>
                         </div>
                     </div>
-
-                    <!-- Project Item 2 -->
-                    <div class="project-item optimization">
-                        <img src="../images/hero.jpg" alt="Project 2">
-                        <div class="project-overlay">
-                            <h3>E-commerce Optimization</h3>
-                            <p>Increased conversion rates by 40%</p>
+                    <div class="portfolio-item optimization">
+                        <img src="images/BussinessOptimization2.png" alt="Optimization Project 2">
+                        <div class="portfolio-content">
+                            <h3>Business Optimisation</h3>
+                            <p>Check out the code we developed to simplify email filing—connecting Gmail to Excel for
+                                seamless order tracking and
+                                management.</p>
                         </div>
                     </div>
-
-                    <!-- Project Item 3 -->
-                    <div class="project-item software">
-                        <img src="../images/customerLogo2.jpg" alt="Project 3">
-                        <div class="project-overlay">
-                            <h3>Custom CRM Solution</h3>
-                            <p>Streamlined operations for a finance firm</p>
+                    <div class="portfolio-item software">
+                        <img src="images/CRM2.png" alt="Software Solutions Project 2">
+                        <div class="portfolio-content">
+                            <h3>Custom Software Solutions</h3>
+                            <p>We designed a bespoke CRM system for a client to manage their customer interactions more
+                                effectively using platforms
+                                like make.com.</p>
                         </div>
                     </div>
-
-                    <!-- Project Item 1 -->
-                    <div class="project-item marketing">
-                        <img src="../images/Image3.png" alt="Project 1">
-                        <div class="project-overlay">
-                            <h3>Digital Marketing Campaign</h3>
-                            <p>Boosted online presence for a tech startup</p>
+                    <div class="portfolio-item optimization">
+                        <img src="images/BussinessOptimization3.png" alt="Optimization Project 3">
+                        <div class="portfolio-content">
+                            <h3>Business Optimisation</h3>
+                            <p>See how we built a KPI analyzer for our client’s Instagram account—automatically tracking
+                                performance metrics and
+                                insights to drive strategy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item outsourcing">
+                        <img src="images/Outsourcing1.PNG" alt="Outsourcing Project 1">
+                        <div class="portfolio-content">
+                            <h3>Convenient Outsourcing</h3>
+                            <p>We took over customer support for a client, tackling inquiries and resolving issues, so
+                                they could concentrate on what
+                                they do best. The result? Happier customers and lower costs!</p>
                         </div>
                     </div>
                 </div>
@@ -409,76 +275,147 @@
         <!-- Case Studies Section -->
         <section class="case-studies">
             <div class="container">
-                <h2 class="section-title" style="color: var(--lavender-web);">Case Studies</h2>
-                <div class="case-study-list">
-                    <!-- Case Study 1 -->
-                    <div class="case-study-item">
-                        <img src="../images/customerLogo1.jpg" alt="Case Study 1">
-                        <div class="case-study-content">
-                            <h3>Revolutionizing Online Retail</h3>
-                            <p>How we helped an e-commerce giant increase sales by 200%</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                <h2 class="section-title" style="margin-bottom: 40px;">Case Studies</h2>
+                <div id="case-studies-slider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-inner">
+                        <!-- Case Study 1 & 2 -->
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-between">
+                                <div class="case-study-item">
+                                    <video width="100%" height="auto" autoplay loop muted>
+                                        <source src="images/6561920-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="case-study-content">
+                                        <h3>Revolutionizing Online Retail</h3>
+                                        <p>How we helped an e-commerce giant increase sales by 200%</p>
+                                    </div>
+                                </div>
+                                <div class="case-study-item">
+                                    <img src="images/customerLogo2.jpg" alt="Case Study 2">
+                                    <div class="case-study-content">
+                                        <h3>B2B Lead Generation Success</h3>
+                                        <p>Generating quality leads for a SaaS company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-between">
+                                <div class="case-study-item">
+                                    <img src="images/customerLogo1.jpg" alt="Case Study 3">
+                                    <div class="case-study-content">
+                                        <h3>Social Media Campaign Success</h3>
+                                        <p>Boosting engagement for a lifestyle brand</p>
+                                    </div>
+                                </div>
+                                <div class="case-study-item">
+                                    <img src="images/customerLogo2.jpg" alt="Case Study 4">
+                                    <div class="case-study-content">
+                                        <h3>App Development Triumph</h3>
+                                        <p>Creating a user-friendly app for a fintech startup</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Case Study 2 -->
-                    <div class="case-study-item">
-                        <img src="../images/customerLogo2.jpg" alt="Case Study 2">
-                        <div class="case-study-content">
-                            <h3>B2B Lead Generation Success</h3>
-                            <p>Generating quality leads for a SaaS company</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#case-studies-slider" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#case-studies-slider" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#case-studies-slider"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#case-studies-slider"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </section>
 
-
-        <section class="testimonial text-center">
+        <!-- Testimonial Section -->
+        <section class="testimonials">
             <div class="container">
-                <div class="subtitle">What Our Clients Say About Us</div>
-                <div id="testimonial4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000"
-                    data-bs-wrap="true">
+                <h2 class="section-title" style="margin-bottom: 40px;">Testimonials</h2>
+                <div id="testimonials-slider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
                     <div class="carousel-inner">
+                        <!-- Testimonial 1 & 2 -->
                         <div class="carousel-item active">
-                            <div class="testimonial4_slide">
-                                <img src="../images/joe-done.jpg" class="img-fluid" alt="Client 1" />
-                                <p>"Amazing Designs and Quality Work! Our experience with Kayi Digital has been
-                                    exceptional.
-                                    Their
-                                    innovative strategies and creative designs have significantly boosted our online
-                                    presence
-                                    and customer
-                                    engagement."</p>
-                                <h4>John Doe</h4>
-                                <p>CEO, ACME Inc.</p>
+                            <div class="d-flex justify-content-between">
+                                <div class="testimonial-item">
+                                    <img src="images/customerLogo1.jpg" alt="Testimonial 1">
+                                    <div class="testimonial-content">
+                                        <p>"Working with this team has been a game-changer for our business. Their
+                                            expertise and
+                                            dedication
+                                            are
+                                            unmatched!"</p>
+                                        <h4>John Doe</h4>
+                                        <span>CEO, Company XYZ</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-item">
+                                    <img src="images/customerLogo2.jpg" alt="Testimonial 2">
+                                    <div class="testimonial-content">
+                                        <p>"The results we've achieved together are outstanding. I highly recommend
+                                            their
+                                            services to
+                                            anyone."
+                                        </p>
+                                        <h4>Jane Smith</h4>
+                                        <span>Founder, Startup ABC</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <!-- Testimonial 3 & 4 (Add more as needed) -->
                         <div class="carousel-item">
-                            <div class="testimonial4_slide">
-                                <img src="../images/joe-done.jpg" class="img-fluid" alt="Client 2" />
-                                <p>"Unmatched Expertise! Working with the Marketing Wizards team has been a game-changer
-                                    for our
-                                    business.
-                                    Their personalized approach and relentless pursuit of excellence have skyrocketed
-                                    our brand
-                                    visibility
-                                    and
-                                    customer loyalty."</p>
-                                <h4>Jane Smith</h4>
-                                <p>Founder & CTO, Tech Innovations</p>
+                            <div class="d-flex justify-content-between">
+                                <div class="testimonial-item">
+                                    <img src="images/customerLogo2.jpg" alt="Testimonial 3">
+                                    <div class="testimonial-content">
+                                        <p>"A fantastic experience from start to finish. The team exceeded all of our
+                                            expectations."</p>
+                                        <h4>Emily Johnson</h4>
+                                        <span>Marketing Director, Lifestyle Co.</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-item">
+                                    <img src="images/customerLogo1.jpg" alt="Testimonial 4">
+                                    <div class="testimonial-content">
+                                        <p>"Exceptional service and incredible results. We couldn't have asked for a
+                                            better
+                                            partnership."
+                                        </p>
+                                        <h4>Michael Brown</h4>
+                                        <span>COO, Fintech Ltd.</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- Add more carousel items here if needed -->
                     </div>
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#testimonial4" data-bs-slide-to="0" class="active"
+                        <button type="button" data-bs-target="#testimonials-slider" data-bs-slide-to="0" class="active"
                             aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#testimonial4" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#testimonials-slider" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <!-- Add more indicators here if you add more carousel items -->
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonials-slider"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonials-slider"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </section>
