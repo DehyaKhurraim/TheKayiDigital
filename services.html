@@ -12,6 +12,57 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <style>
+        .hero-section {
+            background-color: var(--eerie-black);
+            padding: 80px 0;
+            color: var(--lavender-web);
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-left: 40px;
+            text-align: left;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: var(--logo-pink-light);
+            text-align: left;
+        }
+
+        .hero-subtitle {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: left;
+            color: var(--logo-pink-dark);
+        }
+
+        .hero-text {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
         .services-section {
             background-color: var(--eerie-black);
             padding: 80px 0;
@@ -158,23 +209,27 @@
         <section class="hero">
             <div class="container" style="margin-top: 10%;">
                 <div class="row justify-content-center align-items-center text-center" style="min-height: 80vh;">
-                    <div class="col-md-12 col-lg-12">
-                        <h1 class="hero-title" style="font-size: 3rem;">Empowering Your Business with Innovative
-                            Solutions and Unmatched
-                            Expertise</h1>
-                        <p class="hero-subtitle" style="font-size: 1.5rem;">
-                            At Kayi Digital, we specialize in providing tailored, cutting-edge solutions that are
-                            designed to elevate your brand and drive your success. Our team of experts is dedicated to
-                            understanding your unique challenges and crafting strategies that deliver measurable
-                            results. From
-                            comprehensive market analysis to bespoke implementation plans, we are committed to helping
-                            you
-                            achieve sustainable growth and stay ahead of the competition. Let us partner with you to
-                            transform
-                            your vision into reality and set new benchmarks for success in your industry.
+                    <div class="col-md-6 col-lg-6">
+                        <div class="hero-image" style="background-color: antiquewhite;">
+                            <img src="images/Services.png" alt="Marketing Funnel" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <h1 class="hero-title">The KAYI BLUEPRINT</h1>
+                        <h2 class="hero-subtitle">A Full-Funnel Approach!</h2>
+                        <p class="hero-text">
+                            At KAYI, we don't just dip our toes in the marketing pool—we dive in headfirst with a
+                            full-funnel approach that
+                            covers every inch of the customer journey. Think of it as your marketing GPS, guiding you
+                            from "Who's that?" to
+                            "Take my money!" with style and flair. We start at the top of the funnel, casting a net as
+                            wide as a fisherman on a
+                            mission. Our goal? To reel in as many curious prospects as possible. Once we've got their
+                            attention, we get down to
+                            business, refining our approach and focusing on the crème de la crème of your audience—the
+                            ones who are ready and
+                            eager to convert.
                         </p>
-                        <a href="contactus.html" class="btn btn-primary custom-btn">Book Your Free Consultation
-                            Today</a>
                     </div>
                 </div>
             </div>

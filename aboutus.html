@@ -12,6 +12,41 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <style>
+        .hero {
+            color: #ffffff;
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .hero .stat {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero .stat strong {
+            color: var(--logo-pink);
+            font-size: 2.5rem;
+        }
+
+        .hero-content-left {
+            padding-right: 30px;
+        }
+
+        .hero-content-right {
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            padding-left: 30px;
+        }
+
         /* About Us Page Styles */
         .who-we-are {
             padding: 80px 0;
@@ -160,30 +195,24 @@
         <section class="hero">
             <div class="container" style="margin-top: 10%;">
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-md-12 text-center">
-                        <h1 class="hero-title" style="font-size: 3rem;">About Our Journey</h1>
-                        <h4 class="hero-protitle" style="font-size: 2rem;">Fueled by Dreams, Driven by Caffeine</h4>
-                        <p class="hero-subtitle" style="font-size: 1.5rem;">We started with a dream (and more than a few
-                            cups of coffee): to craft
-                            personalized
-                            solutions that help businesses of all sizes succeed. Our passion for innovation keeps us
-                            going, but it’s your
-                            success that truly fuels our journey. In a world that’s always changing, we’re here to make
-                            sure you’re not just
-                            keeping up—you’re leading the way.</p>
-
-                        <p class="hero-subtitle" style="font-size: 1.5rem;">From our humble beginnings, we have always
-                            believed in the power of
-                            creativity and technology to transform businesses.
-                            Our journey began with a small team of visionaries who shared a common goal: to build
-                            impactful solutions that drive
-                            real results. With each project, we’ve embraced challenges as opportunities to grow and
-                            innovate.</p>
-
-                        <a href="contactus.html" class="btn btn-primary custom-btn">Book Your Free Consultation
-                            Today</a>
+                    <div class="col-md-7 hero-content-left">
+                        <h1>Turning Big Dreams into Impactful Solutions</h1>
+                        <p>We began with a handful of dreams and a small team, determined to craft solutions that make
+                            businesses thrive. As
+                            we grew, so did our passion for innovation and your success. Now, we're here to turn
+                            challenges into
+                            opportunities and lead the way forward—while having a blast along the way!</p>
                     </div>
-
+                    <div class="col-md-5 hero-content-right">
+                        <div class="stat"><strong>40+ Team Members:</strong> From a small start to a growing team of 40+
+                            experts.</div>
+                        <div class="stat"><strong>5 New Projects Launched:</strong> Kickstarted with exciting new
+                            projects.</div>
+                        <div class="stat"><strong>10+ Industries Served:</strong> Providing solutions across diverse
+                            fields.</div>
+                        <div class="stat"><strong>90%+ Positive Feedback:</strong> Early clients are thrilled with our
+                            fresh approach.</div>
+                    </div>
                 </div>
             </div>
         </section>
