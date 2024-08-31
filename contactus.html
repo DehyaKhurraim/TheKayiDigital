@@ -180,6 +180,97 @@
             font-size: 24px;
             font-weight: bold;
         }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .contact-form h2 {
+                font-size: 3rem;
+            }
+
+            .contact-card {
+                margin-bottom: 20px;
+            }
+
+            .navbar-toggler {
+                background-color: #e154d7;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 20px 15px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 14px;
+            }
+
+            .contact-form button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .contact-form {
+                padding: 15px 10px;
+            }
+        }
+
+        .contact-form h2 {
+            font-size: 5rem;
+            font-weight: bold;
+            color: var(--logo-pink-light)
+        }
+
+        .contact-form p {
+            font-size: 1.5rem;
+            text-align: left;
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (max-width: 991px) {
+            .contact-form h2 {
+                font-size: 4rem;
+            }
+
+            .contact-form p {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (max-width: 767px) {
+            .contact-form h2 {
+                font-size: 3rem;
+                text-align: center;
+                /* Optional: Center-align the heading on smaller devices */
+            }
+
+            .contact-form p {
+                font-size: 1.1rem;
+                text-align: center;
+                /* Optional: Center-align the paragraph text for better readability */
+            }
+        }
+
+        /* Extra small devices (portrait phones, less than 576px) */
+        @media (max-width: 575px) {
+            .contact-form h2 {
+                font-size: 2.5rem;
+            }
+
+            .contact-form p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -287,11 +378,10 @@
 
         <section class="contact-form" id="contact-form">
             <div class="containers">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-md-6 animate-fade-left">
-                        <h2 style="font-size: 5rem; font-weight: bold; color: var(--logo-pink-light)">Let's Get <span
-                                style="color: var(--logo-pink-dark);">Social</span></h2>
-                        <p style="font-size: 1.5rem; text-align: left;">We’re excited to chat about your goals and show
+                        <h2>Let's Get <span style="color: var(--logo-pink-dark);">Social</span></h2>
+                        <p>We’re excited to chat about your goals and show
                             you how The KAYI
                             Blueprint can make them a
                             reality.<br>
@@ -299,7 +389,7 @@
                         </p>
                     </div>
                     <div class="col-md-6 animate-fade-right">
-                        <h2 style="font-size: 5rem; font-weight: bold; color: var(--logo-pink-light)">Request Free
+                        <h2>Request Free
                             Consultation</h2>
                         <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit"
                             method="POST">
@@ -363,7 +453,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 animate-fade-right">
-                        <h2 style="font-size: 3rem; font-weight: bold; color: var(--logo-pink-light)">Get In Touch</h2>
+                        <h2>Get In Touch</h2>
                         <div class="map-container">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.1501561303617!2d-77.03871668464454!3d38.89767627956992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x715969d86d0b76bf!2sThe%20White%20House!5e0!3m2!1sen!2sus!4v1629308474468!5m2!1sen!2sus"
@@ -372,7 +462,7 @@
                     </div>
                     <div class="col-md-6 animate-fade-left">
                         <div class="contact-details">
-                            <h3 style="font-size: 3rem; font-weight: bold; color: var(--logo-pink-light)">Reach Us</h3>
+                            <h2>Reach Us</h2>
                             <p><i class="fas fa-map-marker-alt"></i> 123/B, Route 66, Downtown, Washington, DC 20004, US
                             </p>
                             <p><i class="fas fa-envelope"></i> info@example.com</p>
@@ -380,8 +470,8 @@
                             <p><i class="fas fa-fax"></i> +001 987-654-3210</p>
                         </div>
                         <div class="toll-free">
-                            <h3 style="font-size: 3rem; font-weight: bold; color: var(--logo-pink-light)">Call us Toll
-                                Free</h3>
+                            <h2>Call us Toll
+                                Free</h2>
                             <p class="phone-number">1-800-1234-567</p>
                         </div>
                     </div>

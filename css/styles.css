@@ -848,4 +848,40 @@ background-color: transparent !important;
   .site-footer .col-md-3 {
     margin-bottom: 30px;
   }
+  .section-title {
+    font-size: 3rem;
+  }
 }
+
+        @media (max-width: 575px) {
+          .filter-buttons {
+            justify-content: space-between;
+            /* Ensure the buttons spread evenly */
+          }
+    
+          .filter-buttons .btn {
+            flex: 0 0 48%;
+            /* Each button takes about half of the available width */
+            margin-bottom: 10px;
+            /* Add spacing between the rows */
+            text-align: center;
+          }
+        }
+    
+        @media (min-width: 576px) and (max-width: 991px) {
+          .filter-buttons .btn {
+            flex: 0 0 auto;
+            /* Reset flex properties for medium screens */
+            margin-bottom: 0;
+            /* No extra margin needed */
+          }
+        }
+    
+        @media (min-width: 992px) {
+          .filter-buttons .btn {
+            flex: 0 0 auto;
+            /* Full-width button on larger screens */
+            margin-bottom: 0;
+            /* No extra margin needed */
+          }
+        }
