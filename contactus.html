@@ -12,6 +12,14 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <style>
+        .containers {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
         /* Contact Info */
         .contact-info {
             padding: 80px 0;
@@ -46,6 +54,9 @@
         .contact-form {
             padding: 60px 0;
             background-color: var(--lavender-web);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .contact-form form {
@@ -53,22 +64,98 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .form-group input,
-        .form-group textarea {
+        input,
+        textarea,
+        select {
             width: 100%;
             padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid var(--platinum);
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: var(--lavender-web);
+            border: none;
+            background-color: var(--dream);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            background-color: #3d3d3d;
+            outline: none;
         }
 
         textarea {
             height: 150px;
-            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: #bbb;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            margin-left: 35px;
+            cursor: pointer;
+        }
+
+        /* Custom checkbox design */
+        .checkbox-item input[type="checkbox"]+label::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            border: 2px solid #bbb;
+            border-radius: 4px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-item input[type="checkbox"]:checked+label::before {
+            background-color: var(--logo-pink-dark);
+            border-color: var(--logo-pink-dark);
+        }
+
+        .checkbox-item input[type="checkbox"]:checked+label::after {
+            content: "\f00c";
+            /* Font Awesome checkmark */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 4px;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .checkbox-item input[type="checkbox"]:focus+label::before {
+            outline: 2px solid #999;
+            outline-offset: 2px;
         }
 
         /* Map Container */
@@ -199,44 +286,91 @@
         </section>
 
         <section class="contact-form" id="contact-form">
-            <div class="container">
+            <div class="containers">
                 <div class="row">
+                    <div class="col-md-6 animate-fade-left">
+                        <h2 style="font-size: 5rem; font-weight: bold; color: var(--logo-pink-light)">Let's Get <span
+                                style="color: var(--logo-pink-dark);">Social</span></h2>
+                        <p style="font-size: 1.5rem; text-align: left;">We’re excited to chat about your goals and show
+                            you how The KAYI
+                            Blueprint can make them a
+                            reality.<br>
+                            Reach out to us for a free custom proposal and let’s start turning your vision into results!
+                        </p>
+                    </div>
                     <div class="col-md-6 animate-fade-right">
                         <h2 style="font-size: 5rem; font-weight: bold; color: var(--logo-pink-light)">Request Free
                             Consultation</h2>
-                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                            <!-- Your Web3Forms Access Key -->
+                        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit"
+                            method="POST">
                             <input type="hidden" name="access_key" value="6cc9188e-bef4-445f-86a0-70d82026849c">
 
-                            <!-- Form Fields -->
                             <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Your name*" required
+                                <input type="text" id="firstName" name="firstName" placeholder="First name*" required
+                                    pattern="[A-Za-z]+" title="Please enter only alphabetic characters">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="lastName" name="lastName" placeholder="Last name*" required
                                     pattern="[A-Za-z]+" title="Please enter only alphabetic characters">
                             </div>
                             <div class="form-group">
                                 <input type="email" id="email" name="email" placeholder="Your email*" required>
                             </div>
                             <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Your message*" required></textarea>
+                                <input type="text" id="companyName" name="companyName" placeholder="Company name*"
+                                    required>
+                            </div>
+                            <div class="form-group" style="flex-basis: 100%;">
+                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone number*"
+                                    required>
+                            </div>
+                            <div style="flex-basis: 100%;">
+                                <p style="font-size: 2.5rem; margin-bottom: 10px;">Services required:
+                                </p>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="PerformanceMarketing" name="services[]"
+                                            value="Performance Marketing">
+                                        <label for="PerformanceMarketing">Performance Marketing</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="BusinessOptimisation" name="services[]"
+                                            value="Business Optimisation">
+                                        <label for="BusinessOptimisation">Business Optimisation</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="CustomSoftwareSolutions" name="services[]"
+                                            value="Custom Software Solutions">
+                                        <label for="CustomSoftwareSolutions">Custom Software Solutions</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="TailoredBusinessOutsourcing" name="services[]"
+                                            value="Tailored Business Outsourcing">
+                                        <label for="TailoredBusinessOutsourcing">Tailored Business Outsourcing</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" style="flex-basis: 100%;">
+                                <textarea id="message" name="message"
+                                    placeholder="Project related comments (Required) *" required></textarea>
                             </div>
 
-                            <!-- Honeypot Field for Spam Protection (optional) -->
                             <input type="text" name="honeypot" style="display:none">
-
-                            <!-- Submission button -->
                             <button type="submit" class="btn btn-primary custom-btn">SUBMIT</button>
-
-                            <!-- Success/Error Messages -->
-                            <p id="result-message" style="display: none;"></p>
                         </form>
+                        <p id="result-message" style="display: none;"></p>
                     </div>
-                    <div class="col-md-6 animate-fade-left">
+                </div>
+                <div class="row">
+                    <div class="col-md-6 animate-fade-right">
                         <h2 style="font-size: 3rem; font-weight: bold; color: var(--logo-pink-light)">Get In Touch</h2>
                         <div class="map-container">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.1501561303617!2d-77.03871668464454!3d38.89767627956992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x715969d86d0b76bf!2sThe%20White%20House!5e0!3m2!1sen!2sus!4v1629308474468!5m2!1sen!2sus"
                                 width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
+                    </div>
+                    <div class="col-md-6 animate-fade-left">
                         <div class="contact-details">
                             <h3 style="font-size: 3rem; font-weight: bold; color: var(--logo-pink-light)">Reach Us</h3>
                             <p><i class="fas fa-map-marker-alt"></i> 123/B, Route 66, Downtown, Washington, DC 20004, US
@@ -338,7 +472,7 @@
                     resultMessage.style.display = 'block';
                     resultMessage.textContent = 'Thank you! Your message has been sent.';
                     resultMessage.style.color = 'green';
-                    form.reset(); // Clear the form after successful submission
+                    form.reset();
                 } else {
                     throw new Error('Form submission failed');
                 }
