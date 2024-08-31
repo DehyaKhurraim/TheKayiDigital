@@ -12,6 +12,13 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/styles.css">
   <style>
+    :root {
+      --step-bg-color: #fff;
+      /* Background for steps */
+      --step-border-color: #ddd;
+      /* Border color for steps */
+    }
+
     .hero .container {
       position: relative;
       z-index: 2;
@@ -47,6 +54,94 @@
     @media (min-width: 768px) {
       .phone-mockup {
         max-width: 450px;
+      }
+    }
+
+    .kayi-blueprint {
+      background-color: var(--eerie-black);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .kayi-blueprint h2 {
+      font-size: 5rem;
+      margin-bottom: 40px;
+      color: var(--logo-pink-light);
+    }
+
+    .blueprint-steps {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      gap: 30px;
+    }
+
+    .step {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: white;
+      border-radius: 15px;
+      padding: 20px;
+      width: 220px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .step-circle {
+      width: 80px;
+      height: 80px;
+      background-color: var(--logo-pink-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      font-size: 1.5rem;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .step-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: var(--primary-text-color);
+    }
+
+    .step-content p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: var(--dream);
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    @media (max-width: 768px) {
+      .blueprint-steps {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .step {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .timeline {
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
@@ -275,6 +370,70 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="kayi-blueprint">
+      <div class="container">
+        <h2>WHAT IS THE KAYI BLUEPRINT?</h2>
+        <div class="blueprint-steps">
+          <div class="step">
+            <div class="step-circle">01</div>
+            <div class="step-content">
+              <div class="step-title">Initial Discovery</div>
+              <p>We start by understanding your unique business needs and goals through an in-depth discovery process.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-circle">02</div>
+            <div class="step-content">
+              <div class="step-title">Onboarding and Kickoff</div>
+              <p>We initiate the onboarding process with a comprehensive kickoff meeting.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-circle">03</div>
+            <div class="step-content">
+              <div class="step-title">Mutual Understanding</div>
+              <p>We ensure that we are fully aligned with your vision and objectives.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-circle">04</div>
+            <div class="step-content">
+              <div class="step-title">Impact Check-In</div>
+              <p>We review the progress of the implemented strategies and assess their impact.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-circle">05</div>
+            <div class="step-content">
+              <div class="step-title">Strategy Workshop</div>
+              <p>We conduct a hands-on workshop to develop and finalize your customized marketing strategy.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-circle">06</div>
+            <div class="step-content">
+              <div class="step-title">Implementation and Results</div>
+              <p>We implement the plan and monitor its effectiveness. You'll start seeing results within this period.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline">
+          <span>Pre-sale</span>
+          <span>Day 1</span>
+          <span>3-5 Days from Contract</span>
+          <span>Week 2</span>
+          <span>Near Day 30</span>
+          <span>Near Day 45</span>
+          <span>90-day Cycle</span>
+        </div>
+        <a href="contactus.html" class="custom-btn" style="padding: 5px; margin-top: 2%;">Apply to receive the KAYI
+          blueprint
+          today!</a>
       </div>
     </section>
 
