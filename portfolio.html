@@ -12,6 +12,47 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <style>
+        .hero {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: url('images/6.png') no-repeat;
+            background-size: contain;
+            opacity: 0.5;
+        }
+
+        .hero::before {
+            top: -100px;
+            left: -100px;
+            transform: rotate(45deg);
+        }
+
+        .hero::after {
+            bottom: -100px;
+            right: -100px;
+            transform: rotate(225deg);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--logo-pink-light);
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
         /* Case Studies Styles */
         .case-studies {
             background-color: var(--eerie-black);
@@ -123,8 +164,8 @@
         <nav class="navbar navbar-expand-lg" style="width: 100%;">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <!-- <img src="#" alt="" width="40" class="d-inline-block align-text-top"> -->
-                    <span style="color: #e154d7;">Kayi Digital.</span>
+                    <img src="images/MKT_Posts_OG-removebg-preview.png" alt="" width="100"
+                        class="d-inline-block align-text-top">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
@@ -136,17 +177,30 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="services.html">Services</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
+                                role="button">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="performance-marketing.html">Performance Marketing</a>
+                                </li>
+                                <li><a class="dropdown-item" href="business-optimisation.html">Business Optimisation</a>
+                                </li>
+                                <li><a class="dropdown-item" href="custom-software.html">Custom Software Solutions</a>
+                                </li>
+                                <li><a class="dropdown-item" href="business-outsourcing.html">Business Outsourcing</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="aboutus.html">AboutUs</a>
+                            <a class="nav-link" href="aboutus.html">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color: #e154d7;">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contactus.html">ContactUs</a>
+                            <a class="nav-link" href="contactus.html">Contact Us</a>
                         </li>
                     </ul>
                     <div class="d-flex ms-3">
@@ -157,23 +211,28 @@
         </nav>
     </header>
 
-    <main style="background-image: url('../images/Image4.png');">
+    <main style="background-image: url('../images/4.png');">
         <section class="hero">
             <div class="container" style="margin-top: 10%;">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-md-12 text-center">
-                        <h1 class="hero-title" style="font-size: 3rem;">Our Creative Portfolio</h1>
-                        <p class="hero-subtitle" style="font-size: 1.5rem;">Explore a collection of our successful
+                <div class="row justify-content-center">
+                    <div class="col-md-10 text-center">
+                        <h1 class="hero-title">Our Creative Portfolio</h1>
+                        <p class="hero-description">
+                            Explore a collection of our successful
                             projects and innovative
                             solutions that have empowered
-                            businesses across various industries.</p>
-                        <p class="hero-subtitle" style="font-size: 1.5rem;">At Kayi Digital, we take pride in our
+                            businesses across various industries.
+                        </p>
+                        <p class="hero-description">
+                            At Kayi Digital, we take pride in our
                             diverse
                             portfolio that spans
                             multiple sectors and showcases our versatility
-                            and creativity. From groundbreaking digital campaigns to cutting-edge software solutions,
+                            and creativity. From groundbreaking digital campaigns to cutting-edge software
+                            solutions,
                             our work reflects our
-                            dedication to solving complex challenges and driving growth for our clients.</p>
+                            dedication to solving complex challenges and driving growth for our clients.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -206,7 +265,8 @@
                         <img src="images/Marketing2.png" alt="Marketing Project 2">
                         <div class="portfolio-content">
                             <h3>Performance Marketing</h3>
-                            <p>Take a peek at the Meta ads we whipped up! See how we make campaigns that catch eyes and
+                            <p>Take a peek at the Meta ads we whipped up! See how we make campaigns that catch eyes
+                                and
                                 drive results.
                                 <br>
                                 <br>
@@ -235,7 +295,8 @@
                         <img src="images/BussinessOptimization2.png" alt="Optimization Project 2">
                         <div class="portfolio-content">
                             <h3>Business Optimisation</h3>
-                            <p>Check out the code we developed to simplify email filing—connecting Gmail to Excel for
+                            <p>Check out the code we developed to simplify email filing—connecting Gmail to Excel
+                                for
                                 seamless order tracking and
                                 management.</p>
                         </div>
@@ -244,7 +305,8 @@
                         <img src="images/CRM2.png" alt="Software Solutions Project 2">
                         <div class="portfolio-content">
                             <h3>Custom Software Solutions</h3>
-                            <p>We designed a bespoke CRM system for a client to manage their customer interactions more
+                            <p>We designed a bespoke CRM system for a client to manage their customer interactions
+                                more
                                 effectively using platforms
                                 like make.com.</p>
                         </div>
@@ -253,7 +315,8 @@
                         <img src="images/BussinessOptimization3.png" alt="Optimization Project 3">
                         <div class="portfolio-content">
                             <h3>Business Optimisation</h3>
-                            <p>See how we built a KPI analyzer for our client’s Instagram account—automatically tracking
+                            <p>See how we built a KPI analyzer for our client’s Instagram account—automatically
+                                tracking
                                 performance metrics and
                                 insights to drive strategy.
                             </p>
@@ -263,7 +326,8 @@
                         <img src="images/Outsourcing1.PNG" alt="Outsourcing Project 1">
                         <div class="portfolio-content">
                             <h3>Convenient Outsourcing</h3>
-                            <p>We took over customer support for a client, tackling inquiries and resolving issues, so
+                            <p>We took over customer support for a client, tackling inquiries and resolving issues,
+                                so
                                 they could concentrate on what
                                 they do best. The result? Happier customers and lower costs!</p>
                         </div>
@@ -275,7 +339,7 @@
         <!-- Case Studies Section -->
         <section class="case-studies">
             <div class="container">
-                <h2 class="section-title" style="margin-bottom: 40px;">Case Studies</h2>
+                <h2 class="section-title" style="margin-bottom: 40px;">Blogs</h2>
                 <div id="case-studies-slider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
                     <div class="carousel-inner">
                         <!-- Case Study 1 & 2 -->
@@ -380,7 +444,8 @@
                                 <div class="testimonial-item">
                                     <img src="images/customerLogo2.jpg" alt="Testimonial 3">
                                     <div class="testimonial-content">
-                                        <p>"A fantastic experience from start to finish. The team exceeded all of our
+                                        <p>"A fantastic experience from start to finish. The team exceeded all of
+                                            our
                                             expectations."</p>
                                         <h4>Emily Johnson</h4>
                                         <span>Marketing Director, Lifestyle Co.</span>

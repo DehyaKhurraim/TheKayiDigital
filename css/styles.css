@@ -18,7 +18,7 @@
 /* Color Variables */
 :root {
   --lavender-web: white;
-  --eerie-black: #1f1e1eff;
+  --eerie-black: #1f1e1e;
   --steel-pink: #bf49dfff;
   --dream: rgb(215, 164, 230);
     --logo-pink: #cf21c3;
@@ -56,8 +56,6 @@ body a {
 
 .logo img
 {
-  width: 40px;
-  margin-right: 3px;
   transition: all .50 ease;
 }
 
@@ -65,7 +63,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
   background-color: var(--eerie-black);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -88,8 +85,7 @@ header {
   color: white;
   font-size: 1.1rem;
   font-weight: 500;
-  padding: 5px 0;
-  margin: 0px 30px;
+  margin: 0px 15px;
   transition: all .50s ease;
 }
 
@@ -431,7 +427,7 @@ background-color: transparent !important;
 /*Services*/
 .services {
   padding: 80px 0;
-    background-color: var(--eerie-black);
+  background-color: rgba(30, 31, 30);
 }
 
 .services .subtitle {
@@ -553,12 +549,12 @@ background-color: transparent !important;
                   overflow: hidden;
                   border-radius: 10px;
                   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                  height: 500px;
+                  height: 600px;
                 }
         
                 .portfolio-item img {
                   width: 100%;
-                  height: 300px;
+                  height: 400px;
                   transition: transform 0.3s ease;
                 }
         
