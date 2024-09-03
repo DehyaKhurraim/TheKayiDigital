@@ -158,22 +158,6 @@
         font-size: 1.2rem;
       }
 
-      .phone-mockup {
-        max-width: 100%;
-        margin-top: 2rem;
-      }
-
-      .phone-frame {
-        width: 100%;
-      }
-
-      .phone-video {
-        top: 8%;
-        left: 45%;
-        width: 180px;
-        height: 380px;
-      }
-
       .services .subtitle,
       .portfolio-section .subtitle,
       .section-title {
@@ -277,13 +261,6 @@
         font-size: 0.9rem;
       }
 
-      .phone-video {
-        top: 15%;
-        left: 33%;
-        width: 130px;
-        height: 270px;
-      }
-
       .services .subtitle,
       .portfolio-section .subtitle,
       .section-title {
@@ -300,6 +277,48 @@
 
       .contact-text p {
         font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .phone-frame {
+        width: 50%;
+      }
+
+      .phone-mockup {
+        align-items: center;
+        justify-content: center;
+      }
+
+      .phone-video {
+        top: 1%;
+        left: 3%;
+        width: 45%;
+        height: 100%;
+      }
+    }
+
+    @media (max-width: 576px) {}
+
+    @media (max-width: 768px) {
+      .blueprint-steps {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .step {
+        width: 100%;
+        max-width: 400px;
       }
     }
   </style>
