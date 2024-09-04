@@ -63,10 +63,65 @@
       text-align: center;
     }
 
+    .kayi-blueprint {
+      background: linear-gradient(45deg, #1f1e1e, var(--dream));
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .kayi-blueprint::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background:
+        radial-gradient(circle, rgba(215, 164, 230, 0.1) 10%, transparent 10%),
+        radial-gradient(circle, rgba(215, 164, 230, 0.1) 10%, transparent 10%);
+      background-position: 0 0, 50px 50px;
+      background-size: 100px 100px;
+      animation: backgroundAnimation 20s linear infinite;
+    }
+
+    @keyframes backgroundAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
     .kayi-blueprint h2 {
       font-size: 5rem;
       margin-bottom: 40px;
       color: var(--logo-pink-light);
+    }
+
+    .kayi-blueprint .heading-title {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: var(--logo-pink-light);
+    }
+
+    .kayi-blueprint .heading-subtitle {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .kayi-blueprint .heading {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .kayi-blueprint .description {
+      margin-bottom: 40px;
+      text-align: left;
     }
 
     .blueprint-steps {
@@ -78,13 +133,14 @@
     }
 
     .step {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: #1f1e1e;
       color: white;
       border-radius: 15px;
       padding: 20px;
-      width: 220px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding-bottom: 50px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
     }
 
     .step:hover {
@@ -109,23 +165,29 @@
     .step-title {
       font-weight: bold;
       margin-bottom: 10px;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       color: var(--primary-text-color);
     }
 
     .step-content p {
       font-size: 1rem;
       opacity: 0.8;
+      min-height: 40px;
     }
 
-    .timeline {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-      font-size: 0.8rem;
+    .step-content span {
       color: var(--dream);
-      max-width: 900px;
-      margin: 20px auto;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .step:hover .step-content span {
+      opacity: 1;
     }
 
     @media (max-width: 768px) {
@@ -137,11 +199,6 @@
       .step {
         width: 100%;
         max-width: 400px;
-      }
-
-      .timeline {
-        flex-direction: column;
-        gap: 10px;
       }
     }
 
@@ -529,60 +586,61 @@
     <section class="kayi-blueprint">
       <div class="container">
         <h2>What Is The Kayi Blueprint?</h2>
-        <div class="blueprint-steps">
-          <div class="step">
+        <div class="row blueprint-steps">
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
             <div class="step-circle">01</div>
             <div class="step-content">
               <div class="step-title">Initial Discovery</div>
               <p>We start by understanding your unique business needs and goals through an in-depth discovery process.
               </p>
+              <span>Pre-sale</span>
             </div>
+
           </div>
-          <div class="step">
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
             <div class="step-circle">02</div>
             <div class="step-content">
               <div class="step-title">Onboarding and Kickoff</div>
               <p>We initiate the onboarding process with a comprehensive kickoff meeting.</p>
+              <span>Day 1</span>
             </div>
+
           </div>
-          <div class="step">
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
             <div class="step-circle">03</div>
             <div class="step-content">
               <div class="step-title">Mutual Understanding</div>
               <p>We ensure that we are fully aligned with your vision and objectives.</p>
+              <span>3-5 Days from Contract</span>
             </div>
+
           </div>
-          <div class="step">
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
             <div class="step-circle">04</div>
             <div class="step-content">
               <div class="step-title">Impact Check-In</div>
               <p>We review the progress of the implemented strategies and assess their impact.</p>
+              <span>Week 2</span>
             </div>
+
           </div>
-          <div class="step">
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
             <div class="step-circle">05</div>
             <div class="step-content">
               <div class="step-title">Strategy Workshop</div>
               <p>We conduct a hands-on workshop to develop and finalize your customized marketing strategy.</p>
+              <span>Near Day 30</span>
             </div>
           </div>
-          <div class="step">
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
             <div class="step-circle">06</div>
             <div class="step-content">
               <div class="step-title">Implementation and Results</div>
               <p>We implement the plan and monitor its effectiveness. You'll start seeing results within this period.
               </p>
+              <span>90-day Cycle</span>
             </div>
           </div>
-        </div>
-        <div class="timeline">
-          <span>Pre-sale</span>
-          <span>Day 1</span>
-          <span>3-5 Days from Contract</span>
-          <span>Week 2</span>
-          <span>Near Day 30</span>
-          <span>Near Day 45</span>
-          <span>90-day Cycle</span>
         </div>
         <a href="contactus.html" class="custom-btn" style="padding: 5px; margin-top: 2%;">Apply to receive the KAYI
           blueprint
@@ -622,6 +680,31 @@
             <h3>Agile Approach</h3>
             <p>Market shifts? Algorithm changes? No problem. We pivot on a dime to keep your strategy one step ahead.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kayi-blueprint">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-section">
+            <h2 class="heading-title">Announcing The KAYI Blueprint</h2>
+            <h1 class="heading-subtitle">APPLY IF YOU WANT TO INCREASE YOUR REVENUE IN THE NEXT 90 DAYS</h1>
+          </div>
+          <div class="col-md-6 cta-section">
+            <p class="heading">The KAYI Blueprint delivers superior marketing strategies and faster results.</p>
+            <p class="description">Within 30 days, you’ll have an actionable, winning marketing strategy, and within
+              90
+              days, you’ll be
+              driving
+              results—or your money back.</p>
+            <p class="description">With The KAYI Blueprint, it's easier than ever to hit your business goals and
+              elevate
+              your organization
+              to
+              new heights.</p>
+            <a href="contactus.html" class="btn btn-primary custom-btn">Apply to receive the KAYI Blueprint today!</a>
           </div>
         </div>
       </div>
