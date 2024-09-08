@@ -131,20 +131,35 @@
         .service-description {
             padding: 50px 0;
             background-color: #f7f7f7;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
         }
 
         .service-description h3 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: var(--logo-pink);
+            color: #1f1e1e;
             font-weight: bold;
         }
 
         .service-description p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: #666;
+            color: aliceblue;
+        }
+
+
+        .service-card {
+            background: linear-gradient(45deg, var(--dream), var(--logo-pink));
+            padding: 30px;
+            border-radius: 10px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
         }
 
         /* Media Queries for Responsiveness */
@@ -336,11 +351,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Custom Web Applications</h3>
-                        <p>Get custom web applications that are designed to meet your specific business needs. Our web
-                            applications are scalable, secure, and easy to use, providing a seamless user experience for
-                            your
-                            customers and employees.</p>
+                        <div class="service-card">
+                            <h3>Custom Web Applications</h3>
+                            <p>Get custom web applications that are designed to meet your specific business needs. Our
+                                web
+                                applications are scalable, secure, and easy to use, providing a seamless user experience
+                                for
+                                your
+                                customers and employees.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -350,11 +369,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Mobile App Development</h3>
-                        <p>Take your business mobile with custom mobile app development services. Our mobile apps are
-                            designed
-                            to provide a seamless user experience, increase engagement, and drive revenue for your
-                            business.</p>
+                        <div class="service-card">
+                            <h3>Mobile App Development</h3>
+                            <p>Take your business mobile with custom mobile app development services. Our mobile apps
+                                are
+                                designed
+                                to provide a seamless user experience, increase engagement, and drive revenue for your
+                                business.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -364,12 +386,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Cloud Solutions</h3>
-                        <p>Migrate to the cloud and experience the benefits of scalability, flexibility, and cost
-                            savings. Our
-                            cloud solutions are designed to meet your specific business needs, providing a secure and
-                            reliable
-                            infrastructure for your applications.</p>
+                        <div class="service-card">
+                            <h3>Cloud Solutions</h3>
+                            <p>Migrate to the cloud and experience the benefits of scalability, flexibility, and cost
+                                savings. Our
+                                cloud solutions are designed to meet your specific business needs, providing a secure
+                                and
+                                reliable
+                                infrastructure for your applications.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -379,12 +404,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Enterprise Software</h3>
-                        <p>Get custom enterprise software solutions that are designed to meet the unique needs of your
-                            business.
-                            Our enterprise software solutions are scalable, secure, and easy to use, providing a
-                            seamless user
-                            experience for your employees.</p>
+                        <div class="service-card">
+                            <h3>Enterprise Software</h3>
+                            <p>Get custom enterprise software solutions that are designed to meet the unique needs of
+                                your
+                                business.
+                                Our enterprise software solutions are scalable, secure, and easy to use, providing a
+                                seamless user
+                                experience for your employees.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -394,11 +422,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>API Development</h3>
-                        <p>Integrate your applications and systems with custom API development services. Our APIs are
-                            designed
-                            to provide a seamless integration experience, enabling you to focus on your core business
-                            activities.</p>
+                        <div class="service-card">
+                            <h3>API Development</h3>
+                            <p>Integrate your applications and systems with custom API development services. Our APIs
+                                are
+                                designed
+                                to provide a seamless integration experience, enabling you to focus on your core
+                                business
+                                activities.</p>
+                        </div>
                     </div>
                 </div>
             </div>

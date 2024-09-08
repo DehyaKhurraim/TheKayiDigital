@@ -131,20 +131,35 @@
         .service-description {
             padding: 50px 0;
             background-color: #f7f7f7;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
         }
 
         .service-description h3 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: var(--logo-pink);
+            color: #1f1e1e;
             font-weight: bold;
         }
 
         .service-description p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: #666;
+            color: aliceblue;
+        }
+
+
+        .service-card {
+            background: linear-gradient(45deg, var(--dream), var(--logo-pink));
+            padding: 30px;
+            border-radius: 10px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
         }
 
         /* Media Queries for Responsiveness */
@@ -339,12 +354,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Workflow Automation</h3>
-                        <p>Automate repetitive tasks and workflows to free up more time for strategic decision-making.
-                            Our
-                            workflow automation solutions help you reduce manual errors, increase efficiency, and
-                            improve
-                            overall productivity.</p>
+                        <div class="service-card">
+                            <h3>Workflow Automation</h3>
+                            <p>Automate repetitive tasks and workflows to free up more time for strategic
+                                decision-making.
+                                Our
+                                workflow automation solutions help you reduce manual errors, increase efficiency, and
+                                improve
+                                overall productivity.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -354,12 +372,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Custom Dashboards</h3>
-                        <p>Get real-time insights into your business operations with custom dashboards that provide a
-                            unified
-                            view of your data. Our dashboards are designed to help you make data-driven decisions, track
-                            key
-                            performance indicators, and identify areas for improvement.</p>
+                        <div class="service-card">
+                            <h3>Custom Dashboards</h3>
+                            <p>Get real-time insights into your business operations with custom dashboards that provide
+                                a
+                                unified
+                                view of your data. Our dashboards are designed to help you make data-driven decisions,
+                                track
+                                key
+                                performance indicators, and identify areas for improvement.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -369,12 +391,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Integration Solutions</h3>
-                        <p>Seamlessly integrate disparate systems and applications to create a unified platform that
-                            drives
-                            efficiency and productivity. Our integration solutions help you break down silos, reduce
-                            manual data
-                            entry, and improve overall system performance.</p>
+                        <div class="service-card">
+                            <h3>Integration Solutions</h3>
+                            <p>Seamlessly integrate disparate systems and applications to create a unified platform that
+                                drives
+                                efficiency and productivity. Our integration solutions help you break down silos, reduce
+                                manual data
+                                entry, and improve overall system performance.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -384,12 +408,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Process Mapping and Optimization</h3>
-                        <p>Identify areas of inefficiency and optimize your business processes to achieve greater
-                            productivity
-                            and efficiency. Our process mapping and optimization services help you streamline
-                            operations, reduce
-                            waste, and improve overall performance.</p>
+                        <div class="service-card">
+                            <h3>Process Mapping and Optimization</h3>
+                            <p>Identify areas of inefficiency and optimize your business processes to achieve greater
+                                productivity
+                                and efficiency. Our process mapping and optimization services help you streamline
+                                operations, reduce
+                                waste, and improve overall performance.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -399,11 +425,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>No-Code App Development</h3>
-                        <p>Build custom applications without writing a single line of code. Our no-code app development
-                            solutions help you create tailored solutions that meet your specific business needs, without
-                            the
-                            need for extensive coding knowledge.</p>
+                        <div class="service-card">
+                            <h3>No-Code App Development</h3>
+                            <p>Build custom applications without writing a single line of code. Our no-code app
+                                development
+                                solutions help you create tailored solutions that meet your specific business needs,
+                                without
+                                the
+                                need for extensive coding knowledge.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -413,11 +443,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>AI Integration</h3>
-                        <p>Unlock the power of artificial intelligence to drive business growth and efficiency. Our AI
-                            integration solutions help you automate tasks, gain insights, and make data-driven decisions
-                            with
-                            confidence.</p>
+                        <div class="service-card">
+                            <h3>AI Integration</h3>
+                            <p>Unlock the power of artificial intelligence to drive business growth and efficiency. Our
+                                AI
+                                integration solutions help you automate tasks, gain insights, and make data-driven
+                                decisions
+                                with
+                                confidence.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -427,12 +461,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Productivity Maximization</h3>
-                        <p>Maximize your team's productivity with our business optimization services. We help you
-                            identify areas
-                            of inefficiency, streamline operations, and implement solutions that drive productivity and
-                            growth.
-                        </p>
+                        <div class="service-card">
+                            <h3>Productivity Maximization</h3>
+                            <p>Maximize your team's productivity with our business optimization services. We help you
+                                identify areas
+                                of inefficiency, streamline operations, and implement solutions that drive productivity
+                                and
+                                growth.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -442,12 +479,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Reduce Time</h3>
-                        <p>Reduce the time spent on manual tasks and focus on high-value activities that drive business
-                            growth.
-                            Our business optimization services help you automate repetitive tasks, streamline
-                            operations, and
-                            free up more time for strategic decision-making.</p>
+                        <div class="service-card">
+                            <h3>Reduce Time</h3>
+                            <p>Reduce the time spent on manual tasks and focus on high-value activities that drive
+                                business
+                                growth.
+                                Our business optimization services help you automate repetitive tasks, streamline
+                                operations, and
+                                free up more time for strategic decision-making.</p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -130,21 +130,41 @@
         /* Service Description Section */
         .service-description {
             padding: 50px 0;
-            background-color: #f7f7f7;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
         }
 
         .service-description h3 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: var(--logo-pink);
+            color: #1f1e1e;
             font-weight: bold;
         }
 
         .service-description p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: #666;
+            color: aliceblue;
+        }
+
+
+        .service-card {
+            background: linear-gradient(45deg, var(--dream), var(--logo-pink));
+            padding: 30px;
+            border-radius: 10px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                margin-bottom: 20px;
+            }
         }
 
         /* Media Queries for Responsiveness */
@@ -341,12 +361,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Pay-Per-Click Advertising</h3>
-                        <p>Our pay-per-click advertising services ensure that your ads are seen by the right people, at
-                            the
-                            right time, and in the right place. We optimize your campaigns to drive maximum ROI and
-                            conversions.
-                        </p>
+                        <div class="service-card">
+                            <h3>Pay-Per-Click Advertising</h3>
+                            <p>Our pay-per-click advertising services ensure that your ads are seen by the right people,
+                                at
+                                the
+                                right time, and in the right place. We optimize your campaigns to drive maximum ROI and
+                                conversions.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -356,12 +379,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Social Media Campaigns</h3>
-                        <p>We craft social media campaigns that drive engagement, increase brand awareness, and generate
-                            leads.
-                            Our team of experts will help you navigate the ever-changing social media landscape and
-                            create
-                            content that resonates with your audience.</p>
+                        <div class="service-card">
+
+                            <h3>Social Media Campaigns</h3>
+                            <p>We craft social media campaigns that drive engagement, increase brand awareness, and
+                                generate
+                                leads.
+                                Our team of experts will help you navigate the ever-changing social media landscape and
+                                create
+                                content that resonates with your audience.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -371,12 +398,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Conversion Rate Optimization</h3>
-                        <p>Our conversion rate optimization services are designed to turn visitors into customers. We
-                            analyze
-                            your website, identify areas for improvement, and implement data-driven solutions to
-                            increase
-                            conversions and revenue.</p>
+                        <div class="service-card">
+
+                            <h3>Conversion Rate Optimization</h3>
+                            <p>Our conversion rate optimization services are designed to turn visitors into customers.
+                                We
+                                analyze
+                                your website, identify areas for improvement, and implement data-driven solutions to
+                                increase
+                                conversions and revenue.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -386,12 +417,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Affiliate Marketing</h3>
-                        <p>We help you partner with top affiliates who can promote your products or services to their
-                            vast
-                            audiences. Our affiliate marketing services ensure that you get maximum ROI from your
-                            partnerships.
-                        </p>
+                        <div class="service-card">
+                            <h3>Affiliate Marketing</h3>
+                            <p>We help you partner with top affiliates who can promote your products or services to
+                                their
+                                vast
+                                audiences. Our affiliate marketing services ensure that you get maximum ROI from your
+                                partnerships.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -401,10 +435,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Email Marketing</h3>
-                        <p>Our email marketing services help you build and nurture relationships with your customers. We
-                            craft
-                            targeted campaigns that drive conversions, increase engagement, and build brand loyalty.</p>
+                        <div class="service-card">
+                            <h3>Email Marketing</h3>
+                            <p>Our email marketing services help you build and nurture relationships with your
+                                customers. We
+                                craft
+                                targeted campaigns that drive conversions, increase engagement, and build brand loyalty.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -414,11 +452,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Promo/Advertisement</h3>
-                        <p>We create eye-catching promos and advertisements that grab attention, drive traffic, and
-                            generate
-                            leads. Our team of experts will help you craft a message that resonates with your audience.
-                        </p>
+                        <div class="service-card">
+                            <h3>Promo/Advertisement</h3>
+                            <p>We create eye-catching promos and advertisements that grab attention, drive traffic, and
+                                generate
+                                leads. Our team of experts will help you craft a message that resonates with your
+                                audience.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -428,10 +469,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Meta Ads</h3>
-                        <p>Our Meta Ads services help you reach your target audience on Facebook, Instagram, and other
-                            Meta
-                            platforms. We optimize your campaigns to drive maximum ROI and conversions.</p>
+                        <div class="service-card">
+                            <h3>Meta Ads</h3>
+                            <p>Our Meta Ads services help you reach your target audience on Facebook, Instagram, and
+                                other
+                                Meta
+                                platforms. We optimize your campaigns to drive maximum ROI and conversions.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -441,11 +485,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>On & Off Page SEO</h3>
-                        <p>Our SEO services help you rank higher on search engines, drive organic traffic, and increase
-                            conversions. We optimize your website's on-page and off-page elements to ensure maximum
-                            visibility
-                            and ROI.</p>
+                        <div class="service-card">
+                            <h3>On & Off Page SEO</h3>
+                            <p>Our SEO services help you rank higher on search engines, drive organic traffic, and
+                                increase
+                                conversions. We optimize your website's on-page and off-page elements to ensure maximum
+                                visibility
+                                and ROI.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -455,12 +502,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Account Management</h3>
-                        <p>We provide dedicated account management services to ensure that your performance marketing
-                            campaigns
-                            are running smoothly and efficiently. Our team of experts will work closely with you to
-                            achieve your
-                            marketing goals.</p>
+                        <div class="service-card">
+                            <h3>Account Management</h3>
+                            <p>We provide dedicated account management services to ensure that your performance
+                                marketing
+                                campaigns
+                                are running smoothly and efficiently. Our team of experts will work closely with you to
+                                achieve your
+                                marketing goals.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -470,10 +520,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Qualified Lead Generation</h3>
-                        <p>Our lead generation services help you attract high-quality leads that are ready to convert.
-                            We use
-                            targeted marketing strategies to drive leads and increase revenue for your business.</p>
+                        <div class="service-card">
+                            <h3>Qualified Lead Generation</h3>
+                            <p>Our lead generation services help you attract high-quality leads that are ready to
+                                convert.
+                                We use
+                                targeted marketing strategies to drive leads and increase revenue for your business.</p>
+                        </div>
                     </div>
                 </div>
             </div>
