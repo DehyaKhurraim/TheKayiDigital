@@ -93,7 +93,7 @@
             padding: 15px;
             border: none;
             background-color: var(--dream);
-            color: #fff;
+            color: #3d3d3d;
             border-radius: 8px;
             font-size: 1rem;
             transition: background-color 0.3s ease;
@@ -103,7 +103,15 @@
         textarea:focus,
         select:focus {
             background-color: #3d3d3d;
+            color: #fff;
             outline: none;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #3d3d3d;
+            opacity: 1;
+            font-size: 0.8rem;
         }
 
         textarea {
