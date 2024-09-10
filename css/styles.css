@@ -633,6 +633,10 @@ background-color: transparent !important;
     border-radius: 10px;
     margin-bottom: 20px;
   }
+
+  .contact-us .custom-btn{
+    width: 70%;
+  }
 }
 
 /* Testimonial Styles */
