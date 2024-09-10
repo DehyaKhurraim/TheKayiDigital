@@ -9,7 +9,877 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"><!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | KayiDigital.</title>
+  <link rel="icon" href="images/MKT_Posts_OG-removebg-preview.png" type="image/x-icon">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    :root {
+      --step-bg-color: #fff;
+      /* Background for steps */
+      --step-border-color: #ddd;
+      /* Border color for steps */
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .phone-mockup {
+      position: relative;
+      max-width: 400rem;
+      /* Increased the size of the phone */
+      margin: 0 auto;
+    }
+
+    .phone-frame {
+      width: 50%;
+      min-height: 10rem;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    .phone-video {
+      position: absolute;
+      top: 1%;
+      left: 2%;
+      width: 45%;
+      height: 98%;
+      object-fit: cover;
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    @media (min-width: 768px) {
+      .phone-mockup {
+        max-width: 450px;
+      }
+    }
+
+    .kayi-blueprint {
+      background-color: var(--eerie-black);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .kayi-blueprint {
+      background: linear-gradient(45deg, #1f1e1e, var(--dream));
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .kayi-blueprint::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background:
+        radial-gradient(circle, rgba(215, 164, 230, 0.1) 10%, transparent 10%),
+        radial-gradient(circle, rgba(215, 164, 230, 0.1) 10%, transparent 10%);
+      background-position: 0 0, 50px 50px;
+      background-size: 100px 100px;
+      animation: backgroundAnimation 20s linear infinite;
+    }
+
+    @keyframes backgroundAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .kayi-blueprint h2 {
+      font-size: 5rem;
+      margin-bottom: 40px;
+      color: var(--logo-pink-light);
+    }
+
+    .kayi-blueprint .heading-title {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: var(--logo-pink-light);
+    }
+
+    .kayi-blueprint .heading-subtitle {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .kayi-blueprint .heading {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .kayi-blueprint .description {
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .blueprint-steps {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      gap: 30px;
+    }
+
+    .step {
+      background-color: #1f1e1e;
+      color: white;
+      border-radius: 15px;
+      padding: 20px;
+      padding-bottom: 50px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .step:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .step-circle {
+      width: 80px;
+      height: 80px;
+      background-color: var(--logo-pink-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      font-size: 1.5rem;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .step-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: var(--primary-text-color);
+    }
+
+    .step-content p {
+      font-size: 1rem;
+      opacity: 0.8;
+      min-height: 40px;
+    }
+
+    .step-content span {
+      color: var(--dream);
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .step:hover .step-content span {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .blueprint-steps {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .step {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .hero {
+        padding: 60px 0;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+
+      .services .subtitle,
+      .portfolio-section .subtitle,
+      .section-title {
+        font-size: 3rem;
+      }
+
+      .service-item {
+        margin-bottom: 2rem;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-item {
+        height: auto;
+      }
+
+      .portfolio-item img {
+        height: auto;
+      }
+
+      .testimonial-item {
+        width: 100%;
+      }
+
+      .reasons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-text,
+      .contact-image {
+        border-radius: 10px;
+        margin-bottom: 2rem;
+      }
+
+      .contact-text h2 {
+        font-size: 2.5rem;
+      }
+
+      .contact-text p {
+        font-size: 1.2rem;
+      }
+
+      .site-footer .col-md-3 {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .phone-video {
+        top: 6%;
+        left: 42%;
+        width: 140px;
+        height: 300px;
+      }
+
+      .services .subtitle,
+      .portfolio-section .subtitle,
+      .section-title {
+        font-size: 2.5rem;
+      }
+
+      .box {
+        margin-bottom: 2rem;
+      }
+
+      .kayi-blueprint h2 {
+        font-size: 2.5rem;
+      }
+
+      .step {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+
+      .timeline {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .timeline span {
+        margin-bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.9rem;
+      }
+
+      .services .subtitle,
+      .portfolio-section .subtitle,
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .kayi-blueprint h2 {
+        font-size: 2rem;
+      }
+
+      .contact-text h2 {
+        font-size: 2rem;
+      }
+
+      .contact-text p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .phone-frame {
+        width: 50%;
+      }
+
+      .phone-mockup {
+        align-items: center;
+        justify-content: center;
+      }
+
+      .phone-video {
+        top: 1%;
+        left: 3%;
+        width: 45%;
+        height: 100%;
+      }
+    }
+
+    @media (max-width: 576px) {}
+
+    @media (max-width: 768px) {
+      .blueprint-steps {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .step {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg" style="width: 100%;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/MKT_Posts_OG-removebg-preview.png" alt="" width="100" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+          style="background-color: #e154d7; right: 0;">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html" style="color: #e154d7">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="performance-marketing.html">Performance Marketing</a></li>
+                <li><a class="dropdown-item" href="business-optimisation.html">Business Optimisation</a></li>
+                <li><a class="dropdown-item" href="custom-software.html">Custom Software Solutions</a></li>
+                <li><a class="dropdown-item" href="business-outsourcing.html">Business Outsourcing</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="d-flex ms-3">
+            <a href="contactus.html" class="btn btn-primary custom-btn">Get Free Audit</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="background-image: url('images/2.png'); height: 100vh;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" style="margin-top: 5%;">
+            <h1 class="hero-title">Your Ecommerce Growth Agency</h1>
+            <p class="hero-subtitle">
+              We help e-commerce brands scale by bringing data driven decisions and creativity
+              together for a full-funnel marketing approach.
+            </p>
+            <a href="contactus.html" class="btn btn-primary custom-btn">Book A Free Consultation</a>
+          </div>
+          <div class="col-md-6" style="margin-top: 10%; margin-left: 0%;">
+            <div class="phone-mockup">
+              <video autoplay loop muted playsinline class="phone-video">
+                <source src="images/WhatsApp Video 2024-09-02 at 22.44.18_ccd7b3d4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <img src="images/phone_035.png" alt="Phone Mockup" class="phone-frame">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <p class="subtitle animate-fade-up">We Work With You</p>
+
+        <div class="row">
+          <div class="col-md-3 animate-fade-up">
+            <div class="service-item">
+              <h3>Performance Marketing</h3>
+              <p>Data-driven tactics that crank up your ROI and online presence.</p>
+              <a href="services.html" class="btn btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 animate-fade-up">
+            <div class="service-item">
+              <h3>Business Optimisation</h3>
+              <p>No-code solutions that cut the clutter and streamline your operations.</p>
+              <a href="services.html" class="btn btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 animate-fade-up">
+            <div class="service-item">
+              <h3>Custom Software Solutions</h3>
+              <p>Tailored CRM, web, and mobile apps that fit your business like a glove.</p>
+              <a href="services.html" class="btn btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 animate-fade-up">
+            <div class="service-item">
+              <h3>Tailored Business Outsourcing</h3>
+              <p>Flexible outsourcing that scales your business without the headaches.</p>
+              <a href="services.html" class="btn btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="container">
+        <h2 class="subtitle">Featured Projects</h2>
+        <div class="filter-buttons d-flex flex-wrap justify-content-center">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="marketing">Marketing</button>
+          <button class="filter-btn" data-filter="optimization">Optimization</button>
+          <button class="filter-btn" data-filter="software">Software Solutions</button>
+          <button class="filter-btn" data-filter="outsourcing">Outsourcing</button>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item marketing">
+            <img src="images/Marketing1.png" alt="Marketing Project 1">
+            <div class="portfolio-content">
+              <h3>Performance Marketing</h3>
+              <p>Showcasing the custom logo we designed for Chay Express—where creativity meets brand
+                identity.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-item marketing">
+            <img src="images/Marketing2.png" alt="Marketing Project 2">
+            <div class="portfolio-content">
+              <h3>Performance Marketing</h3>
+              <p>Take a peek at the Meta ads we whipped up! See how we make campaigns that catch eyes and
+                drive results.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-item optimization">
+            <img src="images/BussinessOptimization1.png" alt="Optimization Project 1">
+            <div class="portfolio-content">
+              <h3>Business Optimisation</h3>
+              <p>Discover the pregnancy tracker app we designed using no-code development! Tailored to
+                make tracking and celebrating
+                every milestone a breeze.</p>
+            </div>
+          </div>
+          <div class="portfolio-item software">
+            <img src="images/CRM1.png" alt="Software Solutions Project 1">
+            <div class="portfolio-content">
+              <h3>Custom Software Solutions</h3>
+              <p>We built a custom inventory system with real-time updates and automated alerts,
+                seamlessly integrating with their sales
+                platform to enhance efficiency and accuracy.</p>
+            </div>
+          </div>
+          <div class="portfolio-item optimization">
+            <img src="images/BussinessOptimization2.png" alt="Optimization Project 2">
+            <div class="portfolio-content">
+              <h3>Business Optimisation</h3>
+              <p>Check out the code we developed to simplify email filing—connecting Gmail to Excel for
+                seamless order tracking and
+                management.</p>
+            </div>
+          </div>
+          <div class="portfolio-item software">
+            <img src="images/CRM2.png" alt="Software Solutions Project 2">
+            <div class="portfolio-content">
+              <h3>Custom Software Solutions</h3>
+              <p>We designed a bespoke CRM system for a client to manage their customer interactions more
+                effectively using platforms
+                like make.com.</p>
+            </div>
+          </div>
+          <div class="portfolio-item optimization">
+            <img src="images/BussinessOptimization3.png" alt="Optimization Project 3">
+            <div class="portfolio-content">
+              <h3>Business Optimisation</h3>
+              <p>See how we built a KPI analyzer for our client’s Instagram account—automatically tracking
+                performance metrics and
+                insights to drive strategy.
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-item outsourcing">
+            <img src="images/Outsourcing1.PNG" alt="Outsourcing Project 1">
+            <div class="portfolio-content">
+              <h3>Convenient Outsourcing</h3>
+              <p>We took over customer support for a client, tackling inquiries and resolving issues, so
+                they could concentrate on what
+                they do best. The result? Happier customers and lower costs!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kayi-blueprint">
+      <div class="container">
+        <h2 style="color: #1f1e1e;">What Is The Kayi Blueprint?</h2>
+        <div class="row blueprint-steps">
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
+            <div class="step-circle">01</div>
+            <div class="step-content">
+              <div class="step-title">Initial Discovery</div>
+              <p>We start by understanding your unique business needs and goals through an in-depth discovery process.
+              </p>
+              <span>Pre-sale</span>
+            </div>
+
+          </div>
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
+            <div class="step-circle">02</div>
+            <div class="step-content">
+              <div class="step-title">Onboarding and Kickoff</div>
+              <p>We initiate the onboarding process with a comprehensive kickoff meeting.</p>
+              <span>Day 1</span>
+            </div>
+
+          </div>
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
+            <div class="step-circle">03</div>
+            <div class="step-content">
+              <div class="step-title">Mutual Understanding</div>
+              <p>We ensure that we are fully aligned with your vision and objectives.</p>
+              <span>3-5 Days from Contract</span>
+            </div>
+
+          </div>
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
+            <div class="step-circle">04</div>
+            <div class="step-content">
+              <div class="step-title">Impact Check-In</div>
+              <p>We review the progress of the implemented strategies and assess their impact.</p>
+              <span>Week 2</span>
+            </div>
+
+          </div>
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
+            <div class="step-circle">05</div>
+            <div class="step-content">
+              <div class="step-title">Strategy Workshop</div>
+              <p>We conduct a hands-on workshop to develop and finalize your customized marketing strategy.</p>
+              <span>Near Day 30</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 step">
+            <div class="step-circle">06</div>
+            <div class="step-content">
+              <div class="step-title">Implementation and Results</div>
+              <p>We implement the plan and monitor its effectiveness. You'll start seeing results within this period.
+              </p>
+              <span>90-day Cycle</span>
+            </div>
+          </div>
+        </div>
+        <a href="contactus.html" class="custom-btn" style="padding: 5px; margin-top: 2%;">Apply to receive the KAYI
+          blueprint
+          today!</a>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+      <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="subtitle">Elevate your brand with our
+          expert marketing solutions
+        </p>
+
+        <div class="reasons-grid">
+          <div class="reason">
+            <i class="bi bi-graph-up"></i>
+            <h3>Data-Driven Strategies</h3>
+            <p>We crunch the numbers so you don’t have to—delivering strategies that pack a punch and show real results
+            </p>
+          </div>
+          <div class="reason">
+            <i class="bi bi-palette"></i>
+            <h3>Creative Excellence</h3>
+            <p>Our design wizards make your brand impossible to ignore, crafting visuals that turn heads and capture
+              hearts.</p>
+          </div>
+          <div class="reason">
+            <i class="bi bi-people"></i>
+            <h3>Dedicated Support</h3>
+            <p>We’ve got your back every step of the way, offering hands-on support that feels as personal as it gets.
+            </p>
+          </div>
+          <div class="reason">
+            <i class="bi bi-lightning"></i>
+            <h3>Agile Approach</h3>
+            <p>Market shifts? Algorithm changes? No problem. We pivot on a dime to keep your strategy one step ahead.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kayi-blueprint">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-section">
+            <h2 class="heading-title" style="text-align: left; font-size: 4rem; color: #1f1e1e;">Announcing The KAYI
+              Blueprint</h2>
+            <h1 class="heading-subtitle" style="color: #ddd;">Apply if you want to increase your revenue in the next 90
+              days</h1>
+          </div>
+          <div class="col-md-6 cta-section">
+            <p class="heading">The KAYI Blueprint delivers superior marketing strategies and faster results.</p>
+            <p class="description">Within 30 days, you’ll have an actionable, winning marketing strategy, and within
+              90
+              days, you’ll be
+              driving
+              results—or your money back.</p>
+            <p class="description">With The KAYI Blueprint, it's easier than ever to hit your business goals and
+              elevate
+              your organization
+              to
+              new heights.</p>
+            <a href="contactus.html" class="btn btn-primary custom-btn">Apply to receive the KAYI Blueprint today!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Testimonials</h2>
+        <div id="testimonials-slider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            <!-- Testimonial 1 & 2 -->
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-between">
+                <div class="testimonial-item">
+                  <img src="images/customerLogo1.jpg" alt="Testimonial 1">
+                  <div class="testimonial-content">
+                    <p>"Working with this team has been a game-changer for our business. Their expertise and dedication
+                      are
+                      unmatched!"</p>
+                    <h4>John Doe</h4>
+                    <span>CEO, Company XYZ</span>
+                  </div>
+                </div>
+                <div class="testimonial-item">
+                  <img src="images/customerLogo2.jpg" alt="Testimonial 2">
+                  <div class="testimonial-content">
+                    <p>"The results we've achieved together are outstanding. I highly recommend their services to
+                      anyone."
+                    </p>
+                    <h4>Jane Smith</h4>
+                    <span>Founder, Startup ABC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 3 & 4 (Add more as needed) -->
+            <div class="carousel-item">
+              <div class="d-flex justify-content-between">
+                <div class="testimonial-item">
+                  <img src="images/customerLogo2.jpg" alt="Testimonial 3">
+                  <div class="testimonial-content">
+                    <p>"A fantastic experience from start to finish. The team exceeded all of our expectations."</p>
+                    <h4>Emily Johnson</h4>
+                    <span>Marketing Director, Lifestyle Co.</span>
+                  </div>
+                </div>
+                <div class="testimonial-item">
+                  <img src="images/customerLogo1.jpg" alt="Testimonial 4">
+                  <div class="testimonial-content">
+                    <p>"Exceptional service and incredible results. We couldn't have asked for a better partnership."
+                    </p>
+                    <h4>Michael Brown</h4>
+                    <span>COO, Fintech Ltd.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#testimonials-slider" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#testimonials-slider" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonials-slider"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonials-slider"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 contact-text animate-fade-up">
+            <h2>Let Us Help You</h2>
+            <p>We can help you bring your ideas to life. Let's talk about what we can build and raise together.</p>
+            <button class="btn custom-btn">Connect with us!</button>
+          </div>
+          <div class="col-md-6 contact-image animate-fade-in">
+            <img src="../images/team.jpg" alt="Team working together">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="#" class="footer-logo">
+            <!-- <img src="../images/logo.png" alt="Digital Agency Logo"> -->
+            <span>Kayi<br>Digital</span>
+          </a>
+          <p class="footer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="social-icons">
+            <a href="https://calendly.com/saadalii/free-business-audit"><i class="fa fa-calendar"></i></a>
+            <a href="https://www.instagram.com/thekayi.digital/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61565056286873&mibextid=LQQJ4d"><i
+                class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/the-kayi-digital/"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h3>Business</h3>
+          <ul class="footer-links">
+            <li><a href="portfolio.html">Project</a></li>
+            <li><a href="aboutus.html">Our Team</a></li>
+            <li><a href="contactus.html">Faq's</a></li>
+            <li><a href="portfolio.html">Customers</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h3>Get In Touch</h3>
+          <p>Rt. 66, Downtown, Washington, DC</p>
+          <p>info@example.com</p>
+          <p>1-800-1234-567</p>
+          <p>+001-987-654-3210</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Kayi Digital | Powered by Kayi Digital</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Include GSAP library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/styles.css">
   <style>
