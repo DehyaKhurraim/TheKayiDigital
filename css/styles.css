@@ -537,6 +537,37 @@ background-color: transparent !important;
                   background-color: var(--logo-pink-light);
                   color: var(--lavender-web);
                 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .portfolio-section{
+    padding: 20px 0;
+  }
+
+    .services {
+      padding: 20px 0;
+    }
+}
+
+@media (max-width: 576px) {
+  .filter-buttons {
+    flex-direction: row;
+    gap: 5px;
+    margin: 5px;
+    /* Increased gap between rows for mobile */
+  }
+
+  .filter-btn {
+    text-align: center;
+    padding: 10px;
+  }
+}
         
                 .portfolio-grid {
                   display: grid;
@@ -550,6 +581,7 @@ background-color: transparent !important;
                   border-radius: 10px;
                   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
                   height: 700px;
+                  background-color: #efdff1;
                 }
         
                 .portfolio-item img {
@@ -565,7 +597,6 @@ background-color: transparent !important;
                 .portfolio-content {
                   padding: 40px;
                   background-color: #efdff1;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
                 }
 
                                 .portfolio-item:hover .portfolio-content {
@@ -584,8 +615,63 @@ background-color: transparent !important;
                   color: var(--eerie-black);
                 }
         
-                
-        
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 0.5fr;
+  }
+  .portfolio-content {
+    padding: 30px;
+  }
+        .portfolio-item {
+          height: auto;
+        }
+    
+        .portfolio-item img {
+          height: 300px;
+        }
+
+  .portfolio-content h3 {
+    font-size: 0.5rem;
+  }
+
+  .portfolio-content p {
+    font-size: 0.9rem;
+    /* Reduce paragraph font size */
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+  }
+
+  .portfolio-item {
+    height: 500px;
+    /* Reduce overall item height */
+  }
+
+  .portfolio-item img {
+    height: 200px;
+    /* Further reduce image height */
+  }
+
+  .portfolio-content {
+    padding: 20px;
+    /* Reduce content padding */
+  }
+
+  .portfolio-content h3 {
+    font-size: 0.9rem;
+    /* Further reduce heading size */
+  }
+
+  .portfolio-content p {
+    font-size: 0.8rem;
+    /* Further reduce paragraph font size */
+  }
+}        
 /*ContactUs*/
 .contact-us {
   padding: 80px 0;
@@ -853,35 +939,128 @@ background-color: transparent !important;
   }
 }
 
-        @media (max-width: 575px) {
-          .filter-buttons {
-            justify-content: space-between;
-            /* Ensure the buttons spread evenly */
-          }
-    
-          .filter-buttons .btn {
-            flex: 0 0 48%;
-            /* Each button takes about half of the available width */
-            margin-bottom: 10px;
-            /* Add spacing between the rows */
-            text-align: center;
-          }
-        }
-    
-        @media (min-width: 576px) and (max-width: 991px) {
-          .filter-buttons .btn {
-            flex: 0 0 auto;
-            /* Reset flex properties for medium screens */
-            margin-bottom: 0;
-            /* No extra margin needed */
-          }
-        }
-    
-        @media (min-width: 992px) {
-          .filter-buttons .btn {
-            flex: 0 0 auto;
-            /* Full-width button on larger screens */
-            margin-bottom: 0;
-            /* No extra margin needed */
-          }
-        }
+        @media (max-width: 768px) {
+  /* General adjustments */
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Hero section */
+  .hero {
+    height: auto !important;
+    padding: 40px 0;
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .phone-mockup {
+    max-width: 80%;
+    margin: 20px auto;
+  }
+
+  .phone-frame {
+    width: 100%;
+  }
+
+  .phone-video {
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+  }
+
+  /* Services section */
+  .services .subtitle {
+    font-size: 2rem !important;
+  }
+
+  .service-item {
+    margin-bottom: 20px;
+  }
+
+  /* Portfolio section */
+  .portfolio-section .subtitle {
+    font-size: 2rem !important;
+  }
+
+  /* Kayi Blueprint section */
+  .kayi-blueprint {
+    padding: 40px 0;
+  }
+
+  .kayi-blueprint h2 {
+    font-size: 2rem !important;
+  }
+
+  .blueprint-steps {
+    gap: 15px;
+  }
+
+  .step {
+    padding: 15px;
+    padding-bottom: 40px;
+  }
+
+  .step-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  /* Why Choose Us section */
+  .why-choose-us .section-title,
+  .why-choose-us .subtitle {
+    font-size: 2rem !important;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials section */
+  .testimonials .section-title {
+    font-size: 2rem !important;
+  }
+
+  .testimonial-item {
+    padding: 15px;
+  }
+
+  /* Contact Us section */
+  .contact-us h2 {
+    font-size: 2rem !important;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 30px 0;
+  }
+
+  .footer-logo span {
+    font-size: 1.5rem;
+  }
+
+  .footer-description {
+    font-size: 0.9rem;
+  }
+
+  .footer-links li a {
+    font-size: 0.9rem;
+  }
+}
