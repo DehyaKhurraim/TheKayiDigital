@@ -334,7 +334,7 @@ background-color: transparent !important;
   color: var(--logo-pink-dark);
   background-color: white;
   border: 1px solid var(--logo-pink);
-  border-radius: var(--border-radius);
+  border-radius: 10px;
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
@@ -438,17 +438,17 @@ background-color: transparent !important;
 }
 
 .service-item {
-  background: var(--logo-pink-light);
+  background: linear-gradient(45deg, var(--dream), var(--logo-pink));
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   padding: 40px;
   height: 100%;
-  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   transition: all 0.3s ease;
+  opacity: 1;
 }
 
 .service-item:hover {
@@ -582,6 +582,7 @@ background-color: transparent !important;
                   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
                   height: 700px;
                   background-color: #efdff1;
+                  opacity: 1;
                 }
         
                 .portfolio-item img {
