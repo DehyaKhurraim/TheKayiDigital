@@ -115,13 +115,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  gsap.utils.toArray(".services .animate-fade-up").forEach((element) => {
-    gsap.from(element, {
-      y: 50,
-      opacity: 1,
+  gsap.utils.toArray(".service-item").forEach((item, index) => {
+    gsap.from(item, {
+      opacity: 0,
       duration: 1,
+      delay: index * 0.1, // Stagger the animation
       scrollTrigger: {
-        trigger: element,
+        trigger: item,
         start: "top 80%",
         end: "bottom 20%",
         toggleActions: "play none none reverse",
